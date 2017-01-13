@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
+
+.toolbar ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	padding-bottom:5px;
+}
+
+.toolbar
+{
+	background-color:#2E4372;
+	border-style:none;
+	border-bottom:2px;
+	border-color:#2E4372;
+}
+
+.toolbarx
+{
+	padding-bottom:20px;
+}
+
+.left_align li
+{
+	float:left;
+	
+}
+
+.right_align li
+{
+	float:right;
+	padding-right:10px;
+}
+.toolbar li a
+{	
+	display: inline-block;
+	text-align:center;
+	transition: 0.3s;
+	padding-left: 15px;
+	padding-right: 20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-decoration: none;
+	color:#FFDF00;
+	
+	
+}
+
+.rest
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	padding-top:3px;
+	padding-left:70px;
+}
+
+.rest2
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	padding-left:70px;
+}
+
+.title
+{
+	font-style:'Cinzel', serif;
+	font-size:35px;
+}
+
