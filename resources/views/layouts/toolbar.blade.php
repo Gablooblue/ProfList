@@ -3,6 +3,7 @@
 <head>
 	<title> {{ config('app.name', 'Laravel') }}</title>
 	<link href="/css/toolbar.css" rel="stylesheet">
+	<script type="text/javascript" src="/js/rToolbar.js"></script>
 	<meta name="csrf-token" content"{{ csrf_token() }}">
 	<script>
 		window.Laravel = <?php echo json_encode
@@ -13,15 +14,16 @@
 </head>
 <body>
 	<div class="toolbarx">
+	<div class="toolbackg">
 	<nav id = "myToolbar" class = 'toolbar'>
 		<ul>
 			<div class="left_align">
 			<div class = "title">
-			<li><a class="Sophists" href="{{ url('/') }}">{{config('app.name', 'Laravel') }}</a></li></div>
+			<li class="titler"><a class="Sophists" href="{{ url('/') }}">{{config('app.name', 'Laravel') }}</a></li></div>
 			<div class = 'rest'>
 			<li><a href="{{ url('/professors') }}">Professors</a></li>
 			<li><a href= "{{ url('/school') }}">Schools</a></li>
-			<li><a href="{{ url('/about') }}">About us</a></li>
+			
 			</div></div>
 			<div class = 'rest2'>
 			<div class = "right_align">
@@ -33,11 +35,26 @@
 				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></div></div>
  				<form id="logout-form" action = "{{ url('/logout') }}" method="POST" style="display:none;"> </form>
 				{{ csrf_field() }}
-</li></div></div>
+</li></div></div></div>
 		</ul>
 			@endif
+			<li class ="iconer">
+				<a class="icon" href="javascript:void(0);" onClick="navbar()">&#9776;</a>
+			</li>
 	</nav>
 	</div>
 	@yield('content')
+	<br><br>
+	<div class="center">
+	<nav id = "myFooter" class="footer">	
+		<ul> 
+			<li> <a href="{{ url('/about') }}">About us</a></li>
+			<li> <a href="{{ url('/contact') }}">Contact us</a></li>
+			<li> <a href="{{ url('/FAQ') }}">FAQ</a></li>
+		</ul>
+	</nav>
+	</div>
+
 </body>
+
 </html>

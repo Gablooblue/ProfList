@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
+.toolbackg
+{
+	width:100%;
+	background-color:#2E4372;
+}
 
 .toolbar ul
 {
@@ -7,17 +12,16 @@
 	margin:0;
 	padding:0;
 	overflow:hidden;
-	padding-bottom:5px;
+	
 }
 
 .toolbar
 {
 	background-color:#2E4372;
-	border-style:none;
-	border-bottom:2px;
-	border-color:#2E4372;
+	border-bottom-style:groove;
+	border-width:2px;
+	border-color:#FFDF00;
 }
-
 .toolbarx
 {
 	padding-bottom:20px;
@@ -39,14 +43,18 @@
 	display: inline-block;
 	text-align:center;
 	transition: 0.3s;
-	padding-left: 15px;
+	padding-left: 20px;
 	padding-right: 20px;
 	padding-top:10px;
-	padding-bottom:10px;
+	padding-bottom:13px;
 	text-decoration: none;
 	color:#FFDF00;
 	
 	
+}
+
+.toolbar li a:hover
+{
 }
 
 .rest
@@ -63,6 +71,12 @@
 	font-size: 25px;
 	padding-left:70px;
 }
+.center
+{
+	margin:0 auto;
+	text-align:center;
+	display:table;
+}
 
 .title
 {
@@ -70,3 +84,59 @@
 	font-size:35px;
 }
 
+
+.footer ul
+{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+.footer li
+{
+	float:left;
+}
+.footer li a
+{
+	text-decoration:none;
+	display:inline-block;
+	text-align:center;
+	padding-right:15px;
+	font-family:'Open Sans Condensed', sans-serif;
+
+}
+
+.toolbar li a.icon {display:none;}
+
+@media screen and (max-width:680px)
+{
+
+	.toolbar li a:not(.Sophists) {display:none;}
+	.toolbar li a.icon 
+	{
+		display:inline-block;
+	}
+}
+
+@media screen and(max-width:680px)
+{
+	.toolbar.responsive {position: relative;}
+	.toolbar.responsive li.icon
+	{
+		position:absolute;
+		right:0;
+		top:0;	
+	}
+
+	.toolbar.responsive li
+	{
+		float:none;
+		display:inline;
+	}
+
+	.toolbar.responsive li a
+	{
+		display:block;
+		text-align:left;
+	}
+}
