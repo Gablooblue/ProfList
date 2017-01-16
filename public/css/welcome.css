@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
+
+li
+{
+	list-style-type:none;
+	text-decoration:none;
+	font-family:'Open Sans Condensed', sans-serif;
+
+}
+
+.centerx
+{
+	margin:0 auto;
+	text-align:center;
+}
+.welcome
+{
+	text-align:center;
+	font-size:30px;
+	font-family:'Cinzel', serif;
+}
+
+.with
+{
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.info li
+{
+	font-size:20px;
+}
+
+.info 
+{
+	padding:0;
+	padding-bottom:10px;
+	margin:0;
+	overflow:hidden;
+}
+
+
+.register
+{
+	background-color:#FFDF00;
+	color:#2E4372;
+	border-style:solid;
+	border-color: #2E4372;
+	border-width:2px;
+	border-radius:4px;
+	font-weight:bold;
+	font-size:18px;
+	font-family:'Open Sans Condensed', sans-serif;
+	cursor:pointer;
+}
+
+.info li
+{
+	padding-bottom:10px;
+}
+
