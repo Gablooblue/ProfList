@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
 
-li
+.centerx li
 {
 	list-style-type:none;
 	text-decoration:none;
@@ -19,6 +19,8 @@ li
 	text-align:center;
 	font-size:30px;
 	font-family:'Cinzel', serif;
+	color:#FFDF00;
+	font-weight:bold;
 }
 
 .with

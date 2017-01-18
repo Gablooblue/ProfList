@@ -45,7 +45,7 @@
 	</div>
 	@yield('content')
 	<br><br>
-	<div class="center">
+	<div class="footercenter">
 	<nav id = "myFooter" class="footer">	
 		<ul> 
 			<li> <a href="{{ url('/about') }}">About us</a></li>

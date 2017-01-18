@@ -20,3 +20,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/about' , 'NavController@about');
 
 Route::get('/schools', 'NavController@schools');
+
+Route::get('/professors', "NavController@professors");
+
+Route::get('/contactus', "NavController@contact");

@@ -14,4 +14,12 @@ class NavController extends Controller
 	{
 		return view('schools');
 	}	
+	public function professors()
+	{
+		return view('professors');
+	}	
+	public function contact()
+	{
+		return view('contact');
+	}
 }
