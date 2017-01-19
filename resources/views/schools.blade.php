@@ -1,4 +1,4 @@
-@extends(layout.toolbar)
+@extends('layouts.toolbar')
 
 @section('content')
 <head>

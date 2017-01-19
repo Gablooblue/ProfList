@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
-R   <!-- Scripts -->
+   <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),

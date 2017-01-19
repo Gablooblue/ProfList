@@ -22,4 +22,8 @@ class NavController extends Controller
 	{
 		return view('contact');
 	}
+	public function FAQ()
+	{
+		return view('FAQ');
+	}	
 }

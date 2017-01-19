@@ -23,4 +23,6 @@ Route::get('/schools', 'NavController@schools');
 
 Route::get('/professors', "NavController@professors");
 
-Route::get('/contactus', "NavController@contact");
+Route::get('/contact', "NavController@contact");
+
+Route::get('/FAQ', 'NavController@FAQ');

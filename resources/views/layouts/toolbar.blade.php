@@ -2,8 +2,10 @@
 <html>
 <head>
 	<title> {{ config('app.name', 'Laravel') }}</title>
+	<link href="/css/app.css" rel="stylesheet">
 	<link href="/css/toolbar.css" rel="stylesheet">
 	<script type="text/javascript" src="/js/rToolbar.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content"{{ csrf_token() }}">
 	<script>
 		window.Laravel = <?php echo json_encode
@@ -13,16 +15,15 @@
 	</script>
 </head>
 <body>
-	<div class="toolbarx">
-	<div class="toolbackg">
-	<nav id = "myToolbar" class = 'toolbar'>
+	<nav id = "myToolbar" class = 'navbar navbar-default navbar-static-top'>
+	<div class="toolbar">
 		<ul>
 			<div class="left_align">
 			<div class = "title">
 			<li class="titler"><a class="Sophists" href="{{ url('/') }}">{{config('app.name', 'Laravel') }}</a></li></div>
 			<div class = 'rest'>
-			<li><a href="{{ url('/professors') }}">Professors</a></li>
-			<li><a href= "{{ url('/school') }}">Schools</a></li>
+			<li><a href="{{ url('/professors') }}">Professors&nbsp<span class= "caret"></span></a></li>
+			<li><a href= "{{ url('/schools') }}">Schools&nbsp<span class = "caret"></span></a></li>
 			
 			</div></div>
 			<div class = 'rest2'>

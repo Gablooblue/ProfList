@@ -1,4 +1,4 @@
-@extends(layout.toolbar)
+@extends('layouts.toolbar')
 
 @section('content')
 <head>
@@ -6,7 +6,7 @@
 	<link rel= "stylesheets" href="/css/professors.css">
 </head>
 <body>
-	<div class = "filterbar">
+	<form class = "filterbar">
 	<ul>
 		<li>School:
 		<select class = "schoolSelect">
@@ -22,7 +22,7 @@
 			<option value = "">Highest rating</option>
 		</select></li>
 	</ul>
-	</div>
+	</form>
 	<!--Display profs here
 	formatting is listed below -->
 	<div class = "profList">
@@ -36,7 +36,7 @@
 	</div>
 	<nav class = "pageNav">
 		<ul>
-			<!-- ill figure this out later -->
+			<!-- ill figure this out later (number buttons at the bottom) -->
 		</ul>
 	</nav>
 </body>	

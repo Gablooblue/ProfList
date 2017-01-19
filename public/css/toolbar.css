@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
-.toolbackg
-{	
-	padding-bottom:30px;
-}
 
 .toolbar ul
 {
@@ -13,18 +9,19 @@
 	overflow:hidden;
 	
 }
-
-.toolbar
+.titler
 {
-	background-color:#2E4372;
+	font-family:'Cinzel', serif;
+	font-size:35px;
+	
+}
+
+#myToolbar
+{
+	border-style:none;
 	border-bottom-style:groove;
 	border-width:2px;
 	border-color:#FFDF00;
-	padding:0;
-}
-.toolbarx
-{
-	width:100%;
 }
 
 .left_align li
@@ -45,8 +42,6 @@
 	transition: 0.3s;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top:10px;
-	padding-bottom:13px;
 	text-decoration: none;
 	color:#FFDF00;
 	
@@ -61,7 +56,7 @@
 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 25px;
-	padding-top:3px;
+	padding-top:6px;
 	padding-left:70px;
 }
 
