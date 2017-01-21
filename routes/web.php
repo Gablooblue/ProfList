@@ -26,3 +26,7 @@ Route::get('/professors', "NavController@professors");
 Route::get('/contact', "NavController@contact");
 
 Route::get('/FAQ', 'NavController@FAQ');
+
+Route::get('/schools?{filter}', "FilterController@school");
+
+Route::get('/professors?{filter}', 'FilterController@professors');

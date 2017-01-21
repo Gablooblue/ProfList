@@ -1383,7 +1383,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: #636b6f;
-  background-color: #FDFDFD;
+  background-color: #FDFFFF;
 }
 
 input,
@@ -1431,7 +1431,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.6;
-  background-color: #FDFDFD;
+  background-color: #FDFFFF;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2739,7 +2739,7 @@ th {
 }
 
 .table .table {
-  background-color: #FDFDFD;
+  background-color: #FDFFFF;
 }
 
 .table-condensed > thead > tr > th,
@@ -4655,7 +4655,7 @@ tbody.collapse.in {
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #FDFDFD;
+  background-color: #FDFFFF;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4738,7 +4738,7 @@ tbody.collapse.in {
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
   .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #FDFDFD;
+    border-bottom-color: #FDFFFF;
   }
 }
 
@@ -5718,7 +5718,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 22px;
   line-height: 1.6;
-  background-color: #FDFDFD;
+  background-color: #FDFFFF;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -6495,7 +6495,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: #fff;
+  background-color: #2E4372;
   border-color: #ddd;
 }
 
@@ -6504,7 +6504,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-default > .panel-heading .badge {
-  color: #fff;
+  color: #2E4372;
   background-color: #333333;
 }
 

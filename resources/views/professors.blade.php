@@ -4,25 +4,27 @@
 <head>
 	<title> Professors </title>
 	<link rel= "stylesheets" href="/css/professors.css">
+	<link rel= "stylesheets" href="/css/app.css">
+	<meta name="csrf-token" content"{{ csrf_token() }}">
+	<script>
+		window.Laravel = <?php echo json_encode
+		([
+			'csrfToken' => csrf_token(),
+		]); ?>
+	</script>
+
 </head>
 <body>
-	<form class = "filterbar">
+	{{ Form::open(array('method' => 'get')) }}
 	<ul>
 		<li>School:
-		<select class = "schoolSelect">
-			<option value = "">Any</option>
-			<option value = "">UP Manila</option>
-			<option value = "">UP Diliman</option>
-		</select></li>
+		{{ Form::select('school', array('any' => 'Any', 'UPM' => 'UP Manila', 'UPD' => 'UP Diliman'), 'Any') }} </li>
 		<li>
 		Sort by:
-		<select class = "sortSelect">
-			<option value = "">Most recent</option>
-			<option value = "">Most popular</option>
-			<option value = "">Highest rating</option>
-		</select></li>
+		{{ Form::select('sort by', array('recent' => 'Most recent', 'popular' => 'Most popular', 'rating' => 'Highest rating'), 'recent') }} </li>
+		<li>{{ Form::submit('Filter') }} </li>
 	</ul>
-	</form>
+	{{ Form::close() }}
 	<!--Display profs here
 	formatting is listed below -->
 	<div class = "profList">

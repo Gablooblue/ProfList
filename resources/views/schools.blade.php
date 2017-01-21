@@ -3,21 +3,27 @@
 @section('content')
 <head>
 	<title> Professors </title>
-	<link rel= "stylesheets" href="/css/professors.css">
+	<link rel= "stylesheets" href="/css/schools.css">
+	<link rel= "stylesheets" href="/css/app.css">
+	<meta name="csrf-token" content"{{ csrf_token() }}">
+	<script>
+		window.Laravel = <?php echo json_encode
+		([
+			'csrfToken' => csrf_token(),
+		]); ?>
+	</script>
+
 </head>
 <body>
-	<div class = "filterbar">
+	{{ Form::open(array('method' => 'get')) }}
 	<ul>
-		<li>
+		<li class = "sortSelect">
 		Sort by:
-		<select class = "sortSelect">
-			<option value = "">Most recent</option>
-			<option value = "">Most popular</option>
-			<option value = "">Highest ratings</option>
-		</select></li>
+		{{ Form::select('sort by', array('recent' => 'Most Recent', 'popular' => 'Most Popular', 'rating' => 'Highest Rating'), 'rating') }}	
+		{{ Form::submit('Filter') }} </li>
 	</ul>
-	</div>
-	<!--Display profs here
+	{{ Form::close() }}
+	<!--Display schools here
 	formatting is listed below -->
 	<div class = "schoolList">
 		Picture Here
@@ -29,7 +35,8 @@
 	</div>
 	<nav class = "pageNav">
 		<ul>
-			<!-- ill figure this out later -->
+			<li><input type= "button" value="Previous"></li>
+			<li><input type= "button" value="Next"></li>
 		</ul>
 	</nav>
 </body>				

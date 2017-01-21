@@ -5,6 +5,8 @@
 	<link href="/css/app.css" rel="stylesheet">
 	<link href="/css/toolbar.css" rel="stylesheet">
 	<script type="text/javascript" src="/js/rToolbar.js"></script>
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content"{{ csrf_token() }}">
 	<script>
@@ -34,8 +36,8 @@
 			@else
 				<li> <a href="/account">{{Auth::user()->username}}<a></li>
 				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></div></div>
- 				<form id="logout-form" action = "{{ url('/logout') }}" method="POST" style="display:none;"> </form>
-				{{ csrf_field() }}
+ 				<form id="logout-form" action = "{{ url('/logout') }}" method="POST" style="display:none;">
+				{{ csrf_field() }} </form>
 </li></div></div></div>
 		</ul>
 			@endif
