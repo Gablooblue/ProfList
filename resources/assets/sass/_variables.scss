@@ -12,7 +12,7 @@ $brand-warning: #cbb956;
 $brand-danger:  #bf5329;
 
 // Typography
-$font-family-sans-serif: "Open Sans Condensed", sans-serif;
+$font-family-sans-serif: "Raleway", sans-serif;
 $font-family-title:"Cizel", serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
@@ -22,12 +22,14 @@ $text-color: #636b6f;
 $navbar-default-bg: #2E4372;
 
 // Buttons
-$btn-default-color: $text-color;
+$btn-default-color: #FFDF00;
+
+$input-color: #FFDF00;
 
 // Inputs
-$input-border: lighten($text-color, 40%);
+$input-border: lighten($input-color, 40%);
 $input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+$input-color-placeholder: lighten($input-color, 30%);
 
 // Panels
 $panel-default-heading-bg:#2E4372;

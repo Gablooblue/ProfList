@@ -1,18 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
 
-.toolbar ul
+.navbar-brand
 {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	overflow:hidden;
-	
-}
-.titler
-{
-	font-family:'Cinzel', serif;
-	font-size:35px;
+	font-family:'Cinzel', serif !IMPORTANT;
+	font-size:35px !IMPORTANT;
+	color: #FFDF00 !IMPORTANT;
 	
 }
 
@@ -24,48 +17,28 @@
 	border-color:#FFDF00;
 }
 
-.left_align li
+
+#navbar
 {
-	float:left;
-	
+	font-family: 'Open Sans Condensed', sans-serif !IMPORTANT;
+	font-size: 25px !IMPORTANT;
 }
 
-.right_align li
+#navbar ul li a
 {
-	float:right;
-	padding-right:10px;
-}
-.toolbar li a
-{	
-	display: inline-block;
-	text-align:center;
-	transition: 0.3s;
-	padding-left: 20px;
-	padding-right: 20px;
-	text-decoration: none;
-	color:#FFDF00;
-	
-	
+	color:#FFDF00 !IMPORTANT;
 }
 
-.toolbar li a:hover
+ ul li a:hover
 {
+	color:#EACD00 !IMPORTANT;
 }
 
-.rest
+.navbar-brand:hover
 {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 25px;
-	padding-top:6px;
-	padding-left:70px;
+	color:#EACD00 !IMPORTANT;
 }
 
-.rest2
-{
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 25px;
-	padding-left:70px;
-}
 .footercenter
 {
 	margin:0 auto;
@@ -73,12 +46,16 @@
 	display:table;
 }
 
-.title
+.navbar-toggle.collapsed
 {
-	font-style:'Cinzel', serif;
-	font-size:35px;
+	color:#FFDF00 !IMPORTANT;
+	border:none !IMPORTANT;
 }
 
+.icon-bar
+{
+	background-color:#FFDF00 !IMPORTANT;
+}
 
 .footer ul
 {
@@ -90,6 +67,7 @@
 .footer li
 {
 	float:left;
+	font-size:17px;
 }
 .footer li a
 {
@@ -103,7 +81,7 @@
 
 .toolbar li a.icon {display:none;}
 
-@media screen and (max-width:680px)
+/*@media screen and (max-width:680px)
 {
 
 	.toolbar li a:not(.Sophists) {display:none;}
@@ -134,4 +112,4 @@
 		display:block;
 		text-align:left;
 	}
-}
+}*/
