@@ -15,29 +15,31 @@
 
 </head>
 <body>
-	{{ Form::open(array('method' => 'get')) }}
-	<ul>
-		<li class = "sortSelect">
-		Sort by:
-		{{ Form::select('sort by', array('recent' => 'Most Recent', 'popular' => 'Most Popular', 'rating' => 'Highest Rating'), 'rating') }}	
-		{{ Form::submit('Filter') }} </li>
-	</ul>
+	<div class= "container" style= "padding-top:60px;">
+		{{ Form::open(array('method' => 'get')) }}
+			<div class= "col-md-6">
+				Sort by:
+				{{ Form::select('sort by', array('recent' => 'Most Recent', 'popular' => 'Most Popular', 'rating' => 'Highest Rating'), 'rating') }}	
+				{{ Form::submit('Filter') }} 
+			</div>
+	</div>
 	{{ Form::close() }}
 	<!--Display schools here
 	formatting is listed below -->
 	<div class = "schoolList">
-		Picture Here
-		<ul>
-			<li>School</li>
-			<li>Number of professors</li>
-			<li>Average professor rating</li>
-		</ul>
+		<div class= "container">
+			@foreach ($schools as $school)
+			<div class = "col md-4">
+			Picture Here
+				<ul>
+					<li><h1>{{ school() -> name }}</h1></li>
+					<!--<li>{{ schools() -> number}}</li>-->
+					<!--li>{{ schools() -> average}}</li>-->
+				</ul>
+			@endforeach
+			</div>
+		</div>
+		{{ $schools->links() }}
 	</div>
-	<nav class = "pageNav">
-		<ul>
-			<li><input type= "button" value="Previous"></li>
-			<li><input type= "button" value="Next"></li>
-		</ul>
-	</nav>
 </body>				
 @endsection

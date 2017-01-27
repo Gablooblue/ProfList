@@ -19,14 +19,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/about' , 'NavController@about');
 
-Route::get('/schools', 'NavController@schools');
-
-Route::get('/professors', "NavController@professors");
-
 Route::get('/contact', "NavController@contact");
 
 Route::get('/FAQ', 'NavController@FAQ');
 
-Route::get('/schools?{filter}', "FilterController@school");
+Route::get('/schools', "FilterController@school");
 
-Route::get('/professors?{filter}', 'FilterController@professors');
+Route::get('/professors', 'FilterController@professors');

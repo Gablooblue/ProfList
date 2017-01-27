@@ -18,6 +18,8 @@ class CreateSchoolsTable extends Migration
        		$table->increments('id');
 		$table->string('name')->unique();
 		$table->binary('icon');
+		$table->integer('number');
+		$table->integer('average');
 	    });
     }
 
