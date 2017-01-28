@@ -2,7 +2,7 @@
 
 @section('content')
 <head>
-	<title> Professors </title>
+	<title> Schools </title>
 	<link rel= "stylesheets" href="/css/schools.css">
 	<link rel= "stylesheets" href="/css/app.css">
 	<meta name="csrf-token" content"{{ csrf_token() }}">
@@ -28,14 +28,18 @@
 	formatting is listed below -->
 	<div class = "schoolList">
 		<div class= "container">
+			<div class = "row">
 			@foreach ($schools as $school)
-			<div class = "col md-4">
-			Picture Here
-				<ul>
-					<li><h1>{{ school() -> name }}</h1></li>
-					<!--<li>{{ schools() -> number}}</li>-->
-					<!--li>{{ schools() -> average}}</li>-->
-				</ul>
+				<div class = "col md-4">
+					<div class="media">
+						<div class="media-left"> Picture Here </div>
+						<h2 class="media-heading">{{ school() -> name }}</h2>
+						<div class="media body">
+							<p>{{ schools() -> number}}</p>
+							<p>{{ schools() -> average}}</p>
+						</div>
+					</div>
+				</div>
 			@endforeach
 			</div>
 		</div>

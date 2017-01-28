@@ -16,38 +16,41 @@
 </head>
 <body>
 	<div class= "container" style = "padding-top: 60px">
-		{{ Form::open(array('method' => 'get')) }}
-		<ul>
-			<div class= "col-md-6">
-				School:
-				{{ Form::select('school', array('any' => 'Any', 'UPM' => 'UP Manila', 'UPD' => 'UP Diliman'), 'Any') }}
-				</li>
-			</div>
-			<div class = "col-md-6">
-				
-				Sort by:
-				{{ Form::select('sort by', array('recent' => 'Most recent', 'popular' => 'Most popular', 'rating' => 'Highest rating'), 'recent') }}
-				</li>
-				{{ Form::submit('Filter') }} </li>
-			</div>
-		</ul>
+		<div class="row">
+			{{ Form::open(array('method' => 'get')) }}
+				<div class= "col-md-6">
+					School:
+					{{ Form::select('school', array('any' => 'Any', 'UPM' => 'UP Manila', 'UPD' => 'UP Diliman'), 'Any') }}
+				</div>
+				<div class = "col-md-6">
+					
+					Sort by:
+					{{ Form::select('sort by', array('recent' => 'Most recent', 'popular' => 'Most popular', 'rating' => 'Highest rating'), 'recent') }}
+					{{ Form::submit('Filter') }} 
+				</div>
+			{{ Form::close() }}
+		</div>
 	</div>
-	{{ Form::close() }}
 	<!--Display profs here
 	formatting is listed below -->
-	<div class = "profs">
+	<div class = "profList">
 		<div class = "container">
-			@foreach ($professors as $professor)
-			<div class = "col md-4">
-				<ul>
-					<li><h1 style= "cursor:pointer;">{{ professors() -> name }}</h1></li>
-					<li>{{ professors() -> likes}}</li>
-					<li>{{ professors() -> dislikes }}</li>
-					<li>{{ professors() -> school }}</li>
-					<li>{{ professors() -> class}}</li>
-				</ul>
+			<div class= "row">
+				<div class="media">
+					@foreach ($professors as $professor)
+					<div class="media-left">Picture here </div>
+						<div class = "col md-4">
+								<h2 style= "cursor:pointer;" class="media-heading">{{ professors() -> name }}</h2>
+							<div class="media-body">
+								<p>Likes: {{ professors() -> likes}}</p>
+								<p>Dislikes: {{ professors() -> dislikes }}</p>
+								<p>University: {{ professors() -> school }}</p>
+								<p>Teaches: {{ professors() -> class}}</p>
+							</div>
+						</div>
+					@endforeach
+				</div>
 			</div>
-			@endforeach
 		</div>
 		{{ $professors->links() }}
 	</div>
