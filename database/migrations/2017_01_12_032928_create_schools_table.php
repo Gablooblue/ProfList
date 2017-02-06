@@ -18,7 +18,9 @@ class CreateSchoolsTable extends Migration
        		$table->increments('id');
 		$table->string('name')->unique();
 		$table->binary('icon');
-		$table->integer('number');
+		$table->integer('ProfAmount');
+		$table->string('contact');
+		$table->string('address');
 		$table->integer('average');
 	    });
     }

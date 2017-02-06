@@ -10,7 +10,7 @@
 <body>	
 	
 	<div class= "jumbotron" style="padding-top: 75px !IMPORTANT;">
-		<div class = "container">
+		<div class = "container" >
 		<h1 class = "welcome">Welcome to Sophists</h1><br>
 		<p class = "with"> &nbspSophists is a platform for students to review or to check out the ratings of their professors</p><br>
 		<p>  <input class= "btn-gradient" type="button" onClick="{{ url('/login') }}" value="Already a member? Login"> &nbsp <input class="btn-gradient" type="button" onClick="{{ url('/register')}}" value="Not a member yet? Sign up now!"> </p>

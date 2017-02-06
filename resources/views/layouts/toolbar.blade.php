@@ -4,7 +4,6 @@
 	<title> {{ config('app.name', 'Laravel') }}</title>
 	<link href="/css/app.css" rel="stylesheet"> 
 	<link href="/css/toolbar.css" rel="stylesheet">
-	<script type="text/javascript" src="/js/rToolbar.js"></script>
 	<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
 	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">

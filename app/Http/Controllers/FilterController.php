@@ -11,7 +11,10 @@ class FilterController extends Controller
 	{
 		if(request()->has('sort by'))
 		{
-			
+			if(request()->has('recent'))
+			{
+				$schools = DB::table('schools')->latest()->paginate(12);
+			}	
 		}
 		$schools = DB::table('schools')->paginate(12);
 		return view("schools", ['schools' => $schools]);
