@@ -15,13 +15,22 @@
 
 </head>
 <body>
-	<div class= "container" style= "padding-top:60px;">
-		{{ Form::open(array('method' => 'get')) }}
-			<div class= "col-md-6">
-				Sort by:
-				{{ Form::select('sort by', array('recent' => 'Most Recent', 'popular' => 'Most Popular', 'rating' => 'Highest Rating'), 'rating') }}	
-				{{ Form::submit('Filter') }} 
+	<div class= "container" style= "padding-top:70px;">
+		<div class = "row">
+			{{ Form::open(array('method' => 'get')) }}
+				<div class= "col-md-6">
+					Sort by:
+					{{ Form::select('sort by', array('recent' => 'Most Recent', 'popular' => 'Most Popular', 'rating' => 'Highest Rating'), 'rating') }}	
+					{{ Form::submit('Filter') }} 
+				</div>
+			{{ Form::close() }}
+		</div>
+		<div class = "row">
+			<div class="text-center">
+				<input class = "btn-gradient"type = "button" value = "Add a university" onclick="{{ url('/universities/create') }}">
 			</div>
+		</div>
+	
 	</div>
 	{{ Form::close() }}
 	<!--Display schools here

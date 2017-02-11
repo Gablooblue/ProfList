@@ -23,6 +23,10 @@ Route::get('/contact', "NavController@contact");
 
 Route::get('/FAQ', 'NavController@FAQ');
 
-Route::get('/schools', "FilterController@school");
+Route::get('/universities', "FilterController@school");
 
 Route::get('/professors', 'FilterController@professors');
+
+Route::get('/universities/create', "CreateController@school");
+
+Route::get('/professors/create', "CreateController@professor");

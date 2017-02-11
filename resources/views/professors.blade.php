@@ -15,20 +15,23 @@
 
 </head>
 <body>
-	<div class= "container" style = "padding-top: 60px">
+	<div class= "container" style = "padding-top: 70px">
 		<div class="row">
 			{{ Form::open(array('method' => 'get')) }}
-				<div class= "col-md-6">
+				<div class= "col-md-6 ">
 					School:
 					{{ Form::select('school', array('any' => 'Any', 'UPM' => 'UP Manila', 'UPD' => 'UP Diliman'), 'Any') }}
-				</div>
-				<div class = "col-md-6">
 					
 					Sort by:
 					{{ Form::select('sort by', array('recent' => 'Most recent', 'popular' => 'Most popular', 'rating' => 'Highest rating'), 'recent') }}
 					{{ Form::submit('Filter') }} 
 				</div>
 			{{ Form::close() }}
+		</div>
+		<div class = "row">
+			<div class="text-center">
+				<input class = "btn-gradient"type = "button" value = "Add a professor" onclick="{{ url('/professors/create') }}">
+			</div>
 		</div>
 	</div>
 	<!--Display profs here

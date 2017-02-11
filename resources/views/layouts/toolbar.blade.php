@@ -33,9 +33,9 @@
 				<li class="dropdown">
 					<a href= "#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Universities&nbsp<span class = "caret"></span></a>
 					<ul class = "dropdown-menu">
-						<li> <a href="/schools?sort+by=recent">Most recent</a></li>
-						<li> <a href="/schools?sort+by=popular">Most popular</a></li>
-						<li> <a href="/schools?sort+by=rating">Highest Rating</a></li>
+						<li> <a href="/universities?sort+by=recent">Most recent</a></li>
+						<li> <a href="/universities?sort+by=popular">Most popular</a></li>
+						<li> <a href="/universities?sort+by=rating">Highest Rating</a></li>
 					</ul>	
 				</li>
 				<li><a href="{{ url('/professors') }}" >Professors&nbsp<span class= "caret"></span></a></li>
