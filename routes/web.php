@@ -30,3 +30,9 @@ Route::get('/professors', 'FilterController@professors');
 Route::get('/universities/create', "CreateController@school");
 
 Route::get('/professors/create', "CreateController@professor");
+
+Route::get('/university/{id}' , "UniversityController@show");
+
+Route::get('/professor/{id}', "ProfessorController@show");
+
+Route::get('/user/{user}', "UserController@show");
