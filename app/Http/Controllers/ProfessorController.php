@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Professor;
 
 class ProfessorController extends Controller
 {
@@ -13,7 +14,8 @@ class ProfessorController extends Controller
 	 */
 	public function show(Request $request, $id)
 	{
-		$professor = DB::table('professors')->where('id', $id)->first();
+		$professor = Professor::find($id);
 		return view("professor",['professor' => $professor]);
 	}	
+
 }

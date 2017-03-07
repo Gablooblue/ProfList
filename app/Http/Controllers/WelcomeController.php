@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
 {
+	/**
+	 * @return redirect to home if authenticated
+	 * 		redirect to splash if not
+	 */		
 	public function index()
 	{	
 		if(Auth::check())	

@@ -24,7 +24,9 @@ class ProfessorRequest extends FormRequest
     public function rules()
     {
         return [
-		'name' => 'required|max:255',
+		'fname' => 'required|max:50',
+		'lname' => 'required|max:50',
+		'mname' => 'required|max:5',
 		'class' => 'required|max:255',
 		'school_id' => 'required',
         ];

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,10 @@ class HomeController extends Controller
     {	
 	if(Auth::check())    
 	{
-		return view('home');
+		$professors = DB::Table("professors")
+			->latest()
+			->paginate(12);
+		return view('home', ['professors' => $professors]);
 	}	
 	else
 	{

@@ -22,6 +22,10 @@ $text-color: #636b6f;
 
 // Navbar
 $navbar-default-bg: $color-blue;
+$navbar-default-link-color: $color-gold;
+$dropdown-bg: $navbar-default-bg;
+$dropdown-link-hover-bg: darken($dropdown-bg, 20%);
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 20%);
 
 // Buttons
 $btn-default-color: #FFDF00;

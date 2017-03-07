@@ -31,22 +31,37 @@
 		<div class= "collapse navbar-collapse"  id="navbar">
 			<ul class = "nav navbar-nav">
 				<li class="dropdown">
-					<a href= "#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Universities&nbsp<span class = "caret"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Universities&nbsp<span class = "caret"></span></a>
 					<ul class = "dropdown-menu">
 						<li> <a href="/universities?sort+by=recent">Most recent</a></li>
 						<li> <a href="/universities?sort+by=popular">Most popular</a></li>
 						<li> <a href="/universities?sort+by=rating">Highest Rating</a></li>
 					</ul>	
 				</li>
-				<li><a href="{{ url('/professors') }}" >Professors&nbsp<span class= "caret"></span></a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professors&nbsp<span class = "caret"></span></a>
+					<ul class = "dropdown-menu">
+						<li> <a href="{{ url('professors?sort+by=recent') }}">Most recent</a></li>
+						<li> <a href="{{ url('professors?sort+by=popular')}}">Most popular</a></li>
+						<li> <a href="{{ url('professors?sort+by=rating')}}">Highest Rating</a></li>
+					</ul>	
+				</li>
+</span></a></li>
 			</ul>
 			<ul class = "nav navbar-nav navbar-right">	
 				@if (Auth::guest())
 					<li><a href= "{{url('/login')}}">Login</a></li>
 					<li><a href="{{url('/register')}}">Sign Up</a></li>
 				@else
-				<li> <a href="/account">{{Auth::user()->username}}<span class= "caret"></span></a></li>
-				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+				<li class = "dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						{{Auth::user()->username}}&nbsp<span class= "caret"></span>
+					</a>
+					<ul class = "dropdown-menu">
+						<li> <a href= "{{ url('/account') }}">Account</a></li>
+						<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+					</ul>
+				</li>
  				<form id="logout-form" action = "{{ url('/logout') }}" method="POST" style="display:none;">
 				{{ csrf_field() }}
 				 </form>
@@ -66,6 +81,7 @@
 		</ul>
 	</nav>
 	</div>
+	<script src="/js/app.js"></script>
 
 </body>
 

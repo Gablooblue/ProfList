@@ -23,16 +23,16 @@ Route::get('/contact', "NavController@contact");
 
 Route::get('/FAQ', 'NavController@FAQ');
 
-Route::get('/universities', "FilterController@school");
+Route::get('/universities', "FilterController@schools");
 
 Route::get('/professors', 'FilterController@professors');
 
-Route::get('/universities/create', "CreateController@school");
+//Route::get('/universities/create', "CreateController@school");
 
 Route::get('/professors/create', "CreateController@professor");
 
-Route::get('/university/{id}' , "UniversityController@show");
+Route::get('/universities/{id}' , "UniversityController@show");
 
-Route::get('/professor/{id}', "ProfessorController@show");
+Route::get('/professors/{id}', "ProfessorController@show");
 
-Route::get('/user/{user}', "UserController@show");
+Route::get('/users/{user}', "UserController@show");

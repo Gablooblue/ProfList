@@ -7,7 +7,10 @@ use DB;
 
 class FilterController extends Controller
 {
-	public function school()
+	/**
+	 * @return filtered schools
+	 */
+	public function schools()
 	{
 		if(request()->has('sort by'))
 		{
@@ -19,6 +22,10 @@ class FilterController extends Controller
 		$schools = DB::table('schools')->paginate(12);
 		return view("schools", ['schools' => $schools]);
 	}
+
+	/**
+	 * @return filtered professors
+	 */
 	public function professors()
 	{	
 		$professors = DB::table('professors')->paginate(12);

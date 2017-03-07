@@ -6,17 +6,12 @@ use Illuminate\Http\Request;
 
 class NavController extends Controller
 {
+	/**
+	 * @return handles basic navigation for unimportant pages 
+	 */
 	public function about()
 	{
 		return view('about');
-	}	
-	public function schools()
-	{
-		return view('schools');
-	}	
-	public function professors()
-	{
-		return view('professors');
 	}	
 	public function contact()
 	{

@@ -13,12 +13,16 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-	    Schema::create('comments', function (Blueprint $table)
+	    Schema::create('professor_comments', function (Blueprint $table)
 	{		    
 	    $table->increments('id');
-	    $table->integer('prof_id')->references('id')->on('professors');
-	    $table->string('comment');
-	    $table->integer('author_id')->references('id')->on('users');
+	    $table->integer('prof_id')->unsigned();
+	    $table->foreign('prof_id')
+		    ->references('id')
+		    ->on('professors')
+	    	    ->onDelete('cascade');
+	    $table->longText('comment');
+	    $table->string('author');
 	    });
     }
 
@@ -29,6 +33,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-	    Schema::drop('comments');
+	    Schema::dropIfExists('professor_comments');
     }
 }

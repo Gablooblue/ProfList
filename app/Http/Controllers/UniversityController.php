@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\University;
 
 class UniversityController extends Controller
 {
@@ -13,7 +14,7 @@ class UniversityController extends Controller
 	 */
 	public function show(Request $request, $id)
 	{
-		$university = DB::table('schools')->where('id', $id)->first();
+		$university = University::find($id);
 		return view('university', ['university', $university]);
 	}	
 }

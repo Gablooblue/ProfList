@@ -9,20 +9,30 @@
 			Add reviews section
 				& submit review button
 		-->	
-		<div class = "panel-heading">
-			{[ $professor->school()  ]}
-		</div>
 		<div class = "panel-body">
-			<h2> {{ $professor->name() }} </h2>
-			<p>{{ $professor->class() }} </p>
-			<!-- Replace this
-				with percentage
-				--!>
-			<p> {{ $professor->likes() }} </p>
-			<p> {{ $professor->dislikes() }}</p>
-		
-		<!-- add reviews here -->
+			<div class = "media">
+				<div class = "media-left"> Picture here </div>
+				<h2 class = "media-heading"> {{ $professor->name() }} </h2>
+				<div class = "media-body">
+					<h3> {{ $professor->likes()/($professor->likes() + $professor->dislikes()) }}</h3>	
+					<p>University: {{$professor-> school()}}</p>
+					<p>Teaches: {{$professor->class() }}</p>
+				</div>
+			</div>
 		</div>
 	</div>
+	
+	<div class = "panel default-panel">
+		<div class = "media">
+			<div class = "media-left"> 
+				<button>Like</button>
+				<button>Dislike</button>
+			</div>
+			<div class = "media-body">
+				
+			</div>
+		</div>
+	</div>
+
 </div>
 @endsection

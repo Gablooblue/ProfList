@@ -16,8 +16,14 @@ class CreateProfessorsTable extends Migration
 	    Schema::create('professors', function (Blueprint $table)
 	{	    
 	    $table->increments('id');
-	    $table->integer('school_id')->references('id')->on('schools');
-	    $table->string('name', 100);
+	    $table->integer('university_id')->unsigned();
+	    $table->foreign('university_id')
+		    ->references('id')
+		    ->on('universities')
+	    	    ->onDelete('cascade');
+	    $table->string('fname', 50);
+	    $table->string('lname', 50);
+	    $table->string('mname' , 5);
 	    $table->string('class', 100);
 	    $table->integer('likes');
 	    $table->integer('dislikes');
@@ -32,6 +38,6 @@ class CreateProfessorsTable extends Migration
      */
     public function down()
     {
-	    Schema::drop('professors');
+	    Schema::dropIfExists('professors');
     }
 }

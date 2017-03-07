@@ -13,15 +13,13 @@ class CreateSchoolsTable extends Migration
      */
     public function up()
     {
-	    Schema::create('schools', function (Blueprint $table)
+	    Schema::create('universities', function (Blueprint $table)
 	    {	    
        		$table->increments('id');
 		$table->string('name')->unique();
 		$table->binary('icon');
-		$table->integer('ProfAmount');
 		$table->string('contact');
 		$table->string('address');
-		$table->integer('average');
 	    });
     }
 
@@ -32,6 +30,6 @@ class CreateSchoolsTable extends Migration
      */
     public function down()
     {
-	    Schema::drop('schools');
+	    Schema::dropIfExists('universities');
     }
 }

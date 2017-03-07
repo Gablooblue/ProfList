@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class CreateController extends Controller
 {
+	/**
+	 * @return creation views
+	 */
 	public function school()
 	{
 		return view('create_school');
