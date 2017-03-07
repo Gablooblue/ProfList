@@ -36,3 +36,9 @@ Route::get('/universities/{id}' , "UniversityController@show");
 Route::get('/professors/{id}', "ProfessorController@show");
 
 Route::get('/users/{user}', "UserController@show");
+
+Route::post('/professors/create', "ProfessorController@create" );
+
+Route::post('/professors/{id}', "CommentController@CreatePComment");
+
+Route::post('/universities/{id}', 'CommentController@CreateUComment');

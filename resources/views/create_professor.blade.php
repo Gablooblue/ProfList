@@ -9,7 +9,7 @@
 				Submit a professor
 			</div>
 			<div class = "panel-body">
-				<div class = "form-horizontal" role="form" method="post" action={{url('/professor/create')}}>
+				<form class = "form-horizontal" role="form" method="post" >
 					{{ csrf_field() }}
 					<div class = "form-group{{ $errors->has('name') ? ' has-error' : ''}}" >
 						<label for ="fname" class=" col-md-4 control-label">First name</label>
@@ -74,7 +74,7 @@
 							<button type = "submit" class="btn btn-primary">Submit</button>
 						</div>	
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 		</div>

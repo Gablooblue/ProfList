@@ -18,4 +18,15 @@ class ProfessorController extends Controller
 		return view("professor",['professor' => $professor]);
 	}	
 
+	public function create(array $data)
+	{
+		return Professor::create([
+			'fname'	=> $data['fname'],
+			'lname'	 => $data['lname'],
+			'mname' => $data['mname'],
+			'school' => $data['school'],
+			'class' => $data['class'],
+		]);
+	}	
+
 }

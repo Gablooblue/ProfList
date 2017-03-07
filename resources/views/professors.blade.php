@@ -53,9 +53,9 @@
 					@foreach ($professors as $professor)
 					<div class="media-left">Picture here </div>
 						<div class = "col md-4">
-								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ professors() -> name }}</a></h2>
+								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ professors() -> fname }}</a></h2>
 							<div class="media-body">
-								<p><strong>{{ professors() -> likes / (professor() -> dislikes + professor() -> likes)}}</strong></p>
+								<p><strong>{{ professors() -> likes / (professor() -> dislikes + professor() -> likes)}}%</strong></p>
 								<p>University: {{ professors() -> school }}</p>
 								<p>Teaches: {{ professors() -> class}}</p>
 								<p><a href="professors/{{$professor->id}}">Write a review</a></p>
