@@ -42,3 +42,8 @@ Route::post('/professors/create', "ProfessorController@create" );
 Route::post('/professors/{id}', "CommentController@CreatePComment");
 
 Route::post('/universities/{id}', 'CommentController@CreateUComment');
+
+Route::get('/index', function()
+{
+	return view('index');
+});

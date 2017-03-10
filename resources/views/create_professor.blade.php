@@ -5,10 +5,8 @@
 <div class = "container" style= "padding-top:70px;">
 	<div class = "col-md-8 col-md-offset-2">
 		<div class = "panel panel-default">
-			<div class = "panel-heading">
-				Submit a professor
-			</div>
 			<div class = "panel-body">
+			<h3 class = "text-center">Add a professor</h3>
 				<form class = "form-horizontal" role="form" method="post" >
 					{{ csrf_field() }}
 					<div class = "form-group{{ $errors->has('fname') ? ' has-error' : ''}}" >

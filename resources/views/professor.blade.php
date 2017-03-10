@@ -17,7 +17,7 @@
 						<h3 class= "media-heading">{{ $professor->likes/($professor->likes + $professor->dislikes) * 100 }}%</h3>	
 					</div>
 					<div class = "media-body">
-						<p>University: {{$professor->university->name}}</p>
+						<p>University: {{$professor->university_id}}</p>
 						<p>Teaches: {{ $professor->class }}</p>
 					</div>
 				</div>
@@ -27,30 +27,32 @@
 	
 	<div class = "panel default-panel">
 		<div class = "panel-body">
-			<div class = "media">
-			<h3 class = "media-heading">Write a review</h3>
-				<div class = "media-left"> 
-					<div class = "container">
-						<ul class = "rev-buttons">
-							<li>
-								<input type = "radio" id = "like" name = "review"/>
-								<label for = "like" class = "control-label"><span class= "glyphicon glyphicon-thumbs-up"></span></label>
-							</li>
-							<li>
-								<input type = "radio" id = "dislike" name = "review"/>
-								<label for = "dislike" class = "control-label"><span class = "glyphicon glyphicon-thumbs-down"></span></label>
-							</li>
-						</ul>
+			<h3 >Write a review</h3>
+				<div class = "container">
+				<form method = "POST" role="form">
+					<div class = "form-group">
+						<div class ="col-md-8">
+							<label for ="btn-group" class="control-label">Rating</label>
+							<div class = "btn-group" data-toggle="buttons">
+									<label class="radio-inline"><input type="radio" name="review" id="like"><span class = "glyphicon glyphicon-thumbs-up"></span></label>
+		<label class="radio-inline"><input type="radio" name="review" id="dislike"><span class = "glyphicon glyphicon-thumbs-down"></span></label>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class = "media-body">
-					<form method = "POST" role="form">
-						<textarea class = "form-control" name = "comment" id="comment" rows= "50" cols = "20"></textarea>
-						{{ csrf_field() }}
-						<input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
-					</form>
-				</div>
-			</div>
+					<div class = "form-group">
+						<div class = "col-md-10">
+							<label for ="comment" class="control-label">Review</label>
+							<textarea class="form-control" name = "comment" id="comment" rows="10" required></textarea>
+						</div>
+					</div>
+					{{ csrf_field() }}
+					<div class = "form-group">
+						<div class = "col-md-8">
+							<input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
+						</div>
+					</div>
+				</form>
+
 		</div>
 	</div>
 

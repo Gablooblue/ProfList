@@ -38,17 +38,17 @@
 				</div>
 			{{ Form::close() }}
 		</div>
-		<div class ="container">
-			<div class="text-center">
-				<a class = "btn btn-primary"type = "button"  href="{{ url('/professors/create') }}">Add a professor</a>
-			</div>
+	</div>
+	<div class ="container">
+		<div class="text-center">
+			<a class = "btn btn-primary"type = "button"  href="{{ url('/professors/create') }}">Add a professor</a>
 		</div>
 	</div>
 	<!--Display profs here
 	formatting is listed below -->
 	<div class = "container">
 		@foreach ($professors as $professor)
-			<div class = "col md-4">
+			<div class = "col-md-6">
 				<div class = "panel panel-default">
 					<div class = "panel-body">
 						<div class="media">
