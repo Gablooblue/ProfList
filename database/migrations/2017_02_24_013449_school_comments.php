@@ -22,6 +22,7 @@ class SchoolComments extends Migration
 			    ->onDelete('cascade');
 		    $table->string('author');
 		    $table->longText('comment');
+		    $table->timestamps();
 	});
     }
 

@@ -38,36 +38,40 @@
 				</div>
 			{{ Form::close() }}
 		</div>
-		<div class = "row">
+		<div class ="container">
 			<div class="text-center">
-				<input class = "btn btn-primary"type = "button" value = "Add a professor" onclick="{{ url('/professors/create') }}">
+				<a class = "btn btn-primary"type = "button"  href="{{ url('/professors/create') }}">Add a professor</a>
 			</div>
 		</div>
 	</div>
 	<!--Display profs here
 	formatting is listed below -->
-	<div class = "profList">
-		<div class = "container">
-			<div class= "row">
-				<div class="media">
-					@foreach ($professors as $professor)
-					<div class="media-left">Picture here </div>
-						<div class = "col md-4">
-								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ professors() -> fname }}</a></h2>
-							<div class="media-body">
-								<p><strong>{{ professors() -> likes / (professor() -> dislikes + professor() -> likes)}}%</strong></p>
-								<p>University: {{ professors() -> school }}</p>
-								<p>Teaches: {{ professors() -> class}}</p>
-								<p><a href="professors/{{$professor->id}}">Write a review</a></p>
+	<div class = "container">
+		@foreach ($professors as $professor)
+			<div class = "col md-4">
+				<div class = "panel panel-default">
+					<div class = "panel-body">
+						<div class="media">
+							<div class="media-left">Picture here </div>
+							<div class = "media-right">
+								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	<div class= "pull-right">
+									<h1 class="media-heading">{{ $professor -> likes / ($professor -> dislikes + $professor -> likes) * 100}}%</h1>
+									</div>
+
+								<div class="media-body">
+																	<p>University: {{ $professor -> university_id}}</p>
+									<p>Teaches: {{ $professor -> class}}</p>
+									<p><a href="professors/{{$professor->id}}">Write a review</a></p>
+								</div>
 							</div>
 						</div>
-					@endforeach
+					</div>
 				</div>
 			</div>
-		</div>
+		@endforeach
+			</div>
 		<div class = "text-center">
 			{{ $professors->links() }}
-		</div>
 	</div>
 </body>	
 @endsection				

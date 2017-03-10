@@ -23,6 +23,7 @@ class CreateCommentsTable extends Migration
 	    	    ->onDelete('cascade');
 	    $table->longText('comment');
 	    $table->string('author');
+	    $table->timestamps();
 	    });
     }
 

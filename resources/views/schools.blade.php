@@ -37,20 +37,21 @@
 	formatting is listed below -->
 	<div class = "schoolList">
 		<div class= "container">
-			<div class = "row">
 			@foreach ($schools as $school)
 				<div class = "col md-4">
+				<div class = "panel panel-default">
+				<div class = "panel-body">
 					<div class="media">
 						<div class="media-left"> Picture Here </div>
-						<h2 class="media-heading">{{ school() -> name }}</h2>
+						<h2 class="media-heading">{{ $school->name }}</h2>
 						<div class="media body">
-							<p>{{ schools() -> number}}</p>
-							<p>{{ schools() -> average}}</p>
+							<p>{{ $school->contact}}</p>
 						</div>
 					</div>
 				</div>
+				</div>
+				</div>
 			@endforeach
-			</div>
 		</div>
 		{{ $schools->links() }}
 	</div>

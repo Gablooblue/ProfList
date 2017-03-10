@@ -31,7 +31,8 @@
 				</div>
 				@endforeach
 			<a href= "{{ url('professors?sort+by=recent') }}">See more</a>
-		</div>
+		</div> 
+		<!--
 		<div class = "col-md-offset-1">
 			<h2>Most popular</h2>
 			<div class = "col-md-3">
@@ -53,7 +54,7 @@
 				</div>
 				@endforeach
 			<a href= "{{ url('professors?sort+by=popular') }}">See more</a>
-		</div>
+		</div>-->
 	</div>
 </body>
 @endsection

@@ -20,6 +20,7 @@ class CreateSchoolsTable extends Migration
 		$table->binary('icon');
 		$table->string('contact');
 		$table->string('address');
+		$table->timestamps();
 	    });
     }
 

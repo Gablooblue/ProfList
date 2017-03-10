@@ -10,7 +10,7 @@ class Professor extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'fname', 'lname', 'mname', 'school_id', ' class', 'icon',
+		'fname', 'lname', 'mname', 'university_id', 'class', 'icon',
 	];
 	public function comments()
 	{

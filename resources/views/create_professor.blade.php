@@ -11,10 +11,10 @@
 			<div class = "panel-body">
 				<form class = "form-horizontal" role="form" method="post" >
 					{{ csrf_field() }}
-					<div class = "form-group{{ $errors->has('name') ? ' has-error' : ''}}" >
+					<div class = "form-group{{ $errors->has('fname') ? ' has-error' : ''}}" >
 						<label for ="fname" class=" col-md-4 control-label">First name</label>
 						<div class="col-md-6">
-							 <input id = "fname"type= "text" name = "fname" class = "form-control" value="{{ old('fname') }}" required autofocus/> 
+							 <input id ="fname" type= "text" name = "fname" class = "form-control" value="{{ old('fname') }}" required autofocus/> 
 						@if ($errors->has('fname'))
 						    <span class="help-block">
 						<strong>{{ $errors->first('fname') }}</strong>
@@ -61,7 +61,7 @@
 					<div class = "form-group {{ $errors->has('class' ? ' has-error' : '')}}">
 						<label for= "class" class = "col-md-4 control-label">Class/Classes</label>
 						<div class = "col-md-6">
-							<input type= "text" name= "class" class ="form-control" placeholder="Ex. Math 17, CMSC 21"> 
+							<input type= "text" name='class' id='class' class="form-control" placeholder="Ex. Math 17, CMSC 21"> 
 							@if ($errors->has('class'))	
 								<span class = "help-block">
 									<strong> {{ $errors->first('class') }}</strong>

@@ -27,8 +27,8 @@ class ProfessorRequest extends FormRequest
 		'fname' => 'required|max:50',
 		'lname' => 'required|max:50',
 		'mname' => 'required|max:5',
-		'class' => 'required|max:255',
-		'school_id' => 'required',
+		'class' => 'required|max:50',
+		'university_id' => 'required',
         ];
     }
 }

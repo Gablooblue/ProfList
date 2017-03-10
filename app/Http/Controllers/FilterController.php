@@ -16,10 +16,10 @@ class FilterController extends Controller
 		{
 			if(request()->has('recent'))
 			{
-				$schools = DB::table('schools')->latest()->paginate(12);
+				$schools = DB::table('universities')->latest()->paginate(12);
 			}	
 		}
-		$schools = DB::table('schools')->paginate(12);
+		$schools = DB::table('universities')->paginate(12);
 		return view("schools", ['schools' => $schools]);
 	}
 

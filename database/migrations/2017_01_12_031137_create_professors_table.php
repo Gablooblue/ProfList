@@ -25,9 +25,13 @@ class CreateProfessorsTable extends Migration
 	    $table->string('lname', 50);
 	    $table->string('mname' , 5);
 	    $table->string('class', 100);
-	    $table->integer('likes');
-	    $table->integer('dislikes');
-	    $table->binary('icon');
+	    $table->integer('likes')
+	    	  ->default(0);
+	    $table->integer('dislikes')
+	    	  ->default(0);
+	    $table->binary('icon')
+	          ->nullable();
+	    $table->timestamps();
 	    });
     }
 
