@@ -33,6 +33,6 @@ class SchoolComments extends Migration
      */
     public function down()
     {
-	Schema::dropIfExits('university_comments');
+	Schema::dropIfExists('university_comments');
     }
 }

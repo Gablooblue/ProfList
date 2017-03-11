@@ -15,10 +15,20 @@ class CommentController extends Controller
 	}	
 	public function CreatePComment(array $data)
 	{
+		if($data['review'] == 'like')
+			{
+				$likes = true;
+			}	
+			else
+			{
+				$likes = false;
+			}	
+
 		return Professor_comment::create([
 			'author' => $user['username'],
 			'comment' => $data['comment'],
 			'professor_id' => $data['professor_id'],
+			'likes' => $likes,
 		]);
 	}	
 

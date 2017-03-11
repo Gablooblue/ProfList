@@ -36,4 +36,9 @@ class ProfessorController extends Controller
 		return Redirect::to('/professors');
 	}	
 
+	public function university(Request $request)
+	{
+		return $this->belongsTo(University::class, 'university_id', 'id');
+	}	
+
 }

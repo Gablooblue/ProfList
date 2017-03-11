@@ -16,13 +16,14 @@ class CreateCommentsTable extends Migration
 	    Schema::create('professor_comments', function (Blueprint $table)
 	{		    
 	    $table->increments('id');
-	    $table->integer('prof_id')->unsigned();
-	    $table->foreign('prof_id')
+	    $table->integer('professor_id')->unsigned();
+	    $table->foreign('professor_id')
 		    ->references('id')
 		    ->on('professors')
 	    	    ->onDelete('cascade');
 	    $table->longText('comment');
 	    $table->string('author');
+	    $table->boolean('likes');
 	    $table->timestamps();
 	    });
     }

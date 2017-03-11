@@ -17,7 +17,7 @@
 						<h3 class= "media-heading">{{round($percentage,2)}}%</h3>
 					</div>
 					<div class = "media-body">
-						<p>University: {{$professor->university_id}}</p>
+						<p>University: {{$professor->university->name}}</p>
 						<p>Teaches: {{ $professor->class }}</p>
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 					<div class = "form-group">
 						<div class ="col-md-8">
 							<label for ="btn-group" class="control-label">Rating</label>
-							<div class = "btn-group" data-toggle="buttons">
+							<div class = "btn-group" data-toggle="buttons" name="review">
 									<label class="radio-inline"><input type="radio" name="review" id="like"><span class = "glyphicon glyphicon-thumbs-up"></span></label>
 		<label class="radio-inline"><input type="radio" name="review" id="dislike"><span class = "glyphicon glyphicon-thumbs-down"></span></label>
 							</div>

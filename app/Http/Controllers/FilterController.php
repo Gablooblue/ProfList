@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Professor;
 
 class FilterController extends Controller
 {
@@ -19,7 +20,7 @@ class FilterController extends Controller
 				$schools = DB::table('universities')->latest()->paginate(12);
 			}	
 		}
-		$schools = DB::table('universities')->paginate(12);
+		$schools = University::paginate(6);
 		return view("schools", ['schools' => $schools]);
 	}
 
@@ -28,7 +29,9 @@ class FilterController extends Controller
 	 */
 	public function professors()
 	{	
-		$professors = DB::table('professors')->paginate(12);
+		$professors = Professor::withCount('comments')->paginate(8);
 		return view("professors", ['professors' => $professors]);
 	}	
+
+
 }

@@ -17,7 +17,7 @@ class Professor extends Model
 		return $this->hasMany('App\Professor_comment');
 	}	
 
-	public function universities()
+	public function university()
 	{
 		return $this->belongsTo('App\University');
 	}	
