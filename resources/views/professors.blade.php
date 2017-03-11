@@ -55,7 +55,7 @@
 							<div class="media-left">Picture here </div>
 							<div class = "media-right">
 								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	<div class= "pull-right">
-									<h1 class="media-heading">{{ $professor -> likes / ($professor -> dislikes + $professor -> likes) * 100}}%</h1>
+									<h1 class="media-heading">{{ round($professor -> likes / ($professor -> dislikes + $professor -> likes) * 100 ,2)}}%</h1>
 									</div>
 
 								<div class="media-body">

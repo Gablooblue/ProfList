@@ -11,6 +11,10 @@ class UserController extends Controller
 	 * @param Username in URL
 	 * @return user profile
 	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}	
 	public function show(Request $request, $user)
 	{
 		$user = DB::table('users')-> where('username', $user)->first();

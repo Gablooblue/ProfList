@@ -8,6 +8,11 @@ use App\University_comment;
 
 class CommentController extends Controller
 {
+
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}	
 	public function CreatePComment(array $data)
 	{
 		return Professor_comment::create([

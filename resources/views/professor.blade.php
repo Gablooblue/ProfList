@@ -14,7 +14,7 @@
 				<div class= "media-right">
 					<h2 class = "media-heading"> {{ $professor->lname }}, {{$professor->fname}} {{$professor->mname}} </h2>
 					<div class = "pull-right">
-						<h3 class= "media-heading">{{ $professor->likes/($professor->likes + $professor->dislikes) * 100 }}%</h3>	
+						<h3 class= "media-heading">{{round($percentage,2)}}%</h3>
 					</div>
 					<div class = "media-body">
 						<p>University: {{$professor->university_id}}</p>
