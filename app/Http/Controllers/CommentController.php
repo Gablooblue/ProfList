@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Professor_comment;
 use App\University_comment;
+use DB;
+use Auth;
+use Redirect;
 
 class CommentController extends Controller
 {
@@ -13,23 +16,34 @@ class CommentController extends Controller
 	{
 		$this->middleware('auth');
 	}	
-	public function CreatePComment(array $data)
+	public function CreatePComment(Request $request, $id)
 	{
-		if($data['review'] == 'like')
-			{
-				$likes = true;
-			}	
-			else
-			{
-				$likes = false;
-			}	
+		$data = $request->all();
+		$user = Auth::user();
 
-		return Professor_comment::create([
+		if($data['review'] == 'like')
+		{
+			$likes = true;
+			DB::table('professors')
+				->where('id', $id)
+				->increment('likes');
+
+		}	
+		else
+		{
+			$likes = false;
+			DB::table('professors')
+				->where('id', $id)
+				->increment('dislikes');
+		}	
+
+		Professor_comment::create([
 			'author' => $user['username'],
 			'comment' => $data['comment'],
-			'professor_id' => $data['professor_id'],
+			'professor_id' => $id,
 			'likes' => $likes,
 		]);
+		return Redirect::back()->with('message', 'Review successfully posted');
 	}	
 
 	public function CreateUComment(array $data)

@@ -10,7 +10,7 @@ $body-bg: #FDFFFF;
 $brand-primary: #2E4372;
 $brand-info: #8eb4cb;
 $brand-success: #2ab27b;
-$brand-warning: #cbb956;
+$brand-warning: $color-gold;
 $brand-danger:  #bf5329;
 
 // Typography
@@ -28,8 +28,8 @@ $dropdown-link-hover-bg: darken($dropdown-bg, 20%);
 $navbar-default-link-hover-bg: darken($navbar-default-bg, 20%);
 
 // Buttons
-$btn-default-color: #FFDF00;
-
+$btn-primary-color: #FFDF00;
+$btn-warning-color: $color-blue;
 $input-color: $color-blue;
 
 // Inputs
