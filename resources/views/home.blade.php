@@ -21,7 +21,7 @@
 					<div class = "form-group">
 						<label for="school" class="control-label">University</label>
 						<select class="form-control" name = "school" id = "school" value = "old('school')">
-							<option selected>Any</option>
+							<option selected value=''>Any</option>
 							@foreach ($universities as $university)
 								<option value="{{$university->id}}">{{$university->name}}</option>
 							@endforeach
