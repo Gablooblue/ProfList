@@ -50,11 +50,11 @@
 	<div class="col-lg-5 col-sm-6">
 	    <hr class="section-heading-spacer">
 	    <div class="clearfix"></div>
-	    <h2 class="section-heading">What makes Sophists different</h2>
-	    <p class="lead">Other sites use a 5-star system to rate professors. Sophists uses a simple like-dislike system to allow for more accurate results </p>
+	    <h2 class="section-heading">A more realistic rating system</h2>
+	    <p class="lead">Other sites use a 5-star system to rate professors. Sophists uses a simple like-dislike system to not only make the user experience better, but will also allow for more explicit and accurate ratings</p>
 	</div>
 	<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-	    <img class="img-responsive" src="../top-univs.jpg" alt="">
+	    <img class="img-responsive" src="../Beard-Algorithm.jpg" alt="">
 	</div>
     </div>
 
@@ -72,11 +72,11 @@
 	<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
 	    <hr class="section-heading-spacer">
 	    <div class="clearfix"></div>
-	    <h2 class="section-heading">Check out your professors</h2>
-	    <p class="lead">View student's comments and reviews about their professors</p>
+	    <h2 class="section-heading">Supports many universities</h2>
+	    <p class="lead">Sophists supports a large amount of universities and has the capacity to expand to even more in the future</p>
 	</div>
 	<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-	    <img class="img-responsive" src="../Beard-Algorithm.jpg" alt="">
+	    <img class="img-responsive" src="../top-univs.jpg" alt="">
 	</div>
     </div>
 
@@ -94,8 +94,8 @@
 	<div class="col-lg-5 col-sm-6">
 	    <hr class="section-heading-spacer">
 	    <div class="clearfix"></div>
-	    <h2 class="section-heading">Review and comment on your professors</h2>
-	    <p class="lead">Sign up now to review your professors.</p>
+	    <h2 class="section-heading">Ease of use</h2>
+	    <p class="lead">The website is designed with simplicity and user-friendliness in mind. The website is also mobile responsive, allowing you to view it on your phone</p>
 	</div>
 	<div class="col-lg-5 col-lg-offset-2 col-sm-6">
 	    <img class="img-responsive" src="../mouse.jpg" alt="">
