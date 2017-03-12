@@ -15,8 +15,9 @@
 
 </head>
 <body>
-	<div class= "container" style = "padding-top: 70px">
-		<div class = "col-md-5 col-md-offset-3">
+	<div class= "container" style = "padding-top: 70px; ">
+		<div class = "row">
+		<div class = "col-md-6"> 
 			<form class = "form-horizontal" role="form" method="get">
 				<div class= "form-group has-feedback">
 					<input type="text" class="form-control" name="search" id="search" placeholder="Search">
@@ -24,8 +25,9 @@
 				</div>
 			</form>
 		</div>
-		<div class = "col-md-1">
+		<div class = "col-md-2">
 			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#filter">Advanced filters</button>
+		</div>
 		</div>
 		<div class="modal fade" id="filter" role="dialog">
 			<div class="modal-dialog">
@@ -61,20 +63,28 @@
 			</div>
 		</div>
 	</div>
-	<div class ="container">
-		<div class="text-center">
-			<a class = "btn btn-primary"type = "button"  href="{{ url('/professors/create') }}">Add a professor</a>
-		</div>
-	</div>
-	<!--Display profs here
+		<!--Display profs here
 	formatting is listed below -->
+	<!--<div class = "container" style="padding-bottom:10px;">
+		<div class = "row">
+			<div class = "col-md-5">
+				<a class = "btn btn-primary"type = "button"  href="{{ url('/professors/create') }}"><i class="glyphicon glyphicon-plus"></i>&nbspAdd a professor</a>
+			</div>
+		</div>
+	</div>-->
 	<div class = "container">
+		@if ($professors->count() === 0)
+			<div class = 'text-center'>
+				<h3>No results found</h3>
+				<h4>If you can't find the professor you're looking for click <a href="{{ url('professors/create') }}" style="color:#FFDF00">here</a> to add them </h4>
+			</div>
+		@endif
 		@foreach ($professors as $professor)
 			<div class = "col-md-12">
 				<div class = "panel panel-default">
 					<div class = "panel-body">
 						<div class="media">
-							<div class="media-left">Picture here </div>
+							<div class="media-left"><img src="../default-user.png" class="rounded img-responsive" style="min-width:50; max-width:100px;"> </div>
 							<div class = "media-right">
 								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 									<div class= "pull-right">

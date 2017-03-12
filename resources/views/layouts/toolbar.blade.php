@@ -32,14 +32,14 @@
 			</div>
 		<div class= "collapse navbar-collapse"  id="navbar">
 			<ul class = "nav navbar-nav">
-				<li class="dropdown">
+				<!--<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Universities&nbsp<span class = "caret"></span></a>
 					<ul class = "dropdown-menu">
 						<li> <a href="/universities?sort+by=recent">Most recent</a></li>
 						<li> <a href="/universities?sort+by=popular">Most popular</a></li>
 						<li> <a href="/universities?sort+by=rating">Highest Rating</a></li>
 					</ul>	
-				</li>
+				</li>-->
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professors&nbsp<span class = "caret"></span></a>
 					<ul class = "dropdown-menu">

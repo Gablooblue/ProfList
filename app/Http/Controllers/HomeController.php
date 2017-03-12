@@ -23,9 +23,6 @@ class HomeController extends Controller
     {	
 	if(Auth::check())    
 	{
-		$professors = DB::Table("professors")
-			->latest()
-			->paginate(12);
 		return view('home', ['professors' => $professors]);
 	}	
 	else
