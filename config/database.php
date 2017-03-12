@@ -68,11 +68,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => parse_url(getenv("DATABASE_URL"))["host"],
+            'host' => parse_url(getenv("postgres://sszgogxgpvcaqp:78955bf8570d8bcd63255ab8ec61a7ccdbe858941aca30926956118eab2ecbd9@ec2-23-21-80-230.compute-1.amazonaws.com:5432/dt0j27sbb7j2j"))["host"],
             'port' => '5432',
-            'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
-            'username' => parse_url(getenv("DATABASE_URL"))["user"],
-            'password' => parse_url(getenv("DATABASE_URL"))["pass"],
+            'database' => substr(parse_url(getenv("postgres://sszgogxgpvcaqp:78955bf8570d8bcd63255ab8ec61a7ccdbe858941aca30926956118eab2ecbd9@ec2-23-21-80-230.compute-1.amazonaws.com:5432/dt0j27sbb7j2j"))["path"], 1),
+            'username' => parse_url(getenv("postgres://sszgogxgpvcaqp:78955bf8570d8bcd63255ab8ec61a7ccdbe858941aca30926956118eab2ecbd9@ec2-23-21-80-230.compute-1.amazonaws.com:5432/dt0j27sbb7j2j"))["user"],
+            'password' => parse_url(getenv("postgres://sszgogxgpvcaqp:78955bf8570d8bcd63255ab8ec61a7ccdbe858941aca30926956118eab2ecbd9@ec2-23-21-80-230.compute-1.amazonaws.com:5432/dt0j27sbb7j2j"))["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
