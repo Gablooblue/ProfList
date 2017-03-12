@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\University;
-use App\Http\Requests\ProfessorRequest;
+use App\Http\Requests\SchoolRequest;
 
 class UniversityController extends Controller
 {
