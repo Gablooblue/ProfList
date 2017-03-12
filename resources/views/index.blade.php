@@ -51,7 +51,7 @@
 	    <hr class="section-heading-spacer">
 	    <div class="clearfix"></div>
 	    <h2 class="section-heading">A more realistic rating system</h2>
-	    <p class="lead">Other sites use a 5-star system to rate professors. Sophists uses a simple like-dislike system to not only make the user experience better, but will also allow for more explicit and accurate ratings</p>
+	    <p class="lead">Other sites use a 5-star system to rate professors. Sophists uses a simple like-dislike system to not only make the user experience better, but also allows for more explicit and accurate ratings</p>
 	</div>
 	<div class="col-lg-5 col-lg-offset-2 col-sm-6">
 	    <img class="img-responsive" src="../Beard-Algorithm.jpg" alt="">
@@ -95,7 +95,7 @@
 	    <hr class="section-heading-spacer">
 	    <div class="clearfix"></div>
 	    <h2 class="section-heading">Ease of use</h2>
-	    <p class="lead">The website is designed with simplicity and user-friendliness in mind. The website is also mobile responsive, allowing you to view it on your phone</p>
+	    <p class="lead">This mobile-responsive website is designed with simplicity and user-friendliness in mind and also works on your phone.</p>
 	</div>
 	<div class="col-lg-5 col-lg-offset-2 col-sm-6">
 	    <img class="img-responsive" src="../mouse.jpg" alt="">
