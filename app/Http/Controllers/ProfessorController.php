@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Professor;
 use Redirect;
+use App\Http\Requests\ProfessorRequest;
 
 
 class ProfessorController extends Controller
@@ -22,7 +23,7 @@ class ProfessorController extends Controller
 		return view("professor",['professor' => $professor, 'percentage' => $percentage]);
 	}	
 
-	public function create(Request $request)
+	public function create(ProfessorRequest $request)
 	{
 		$this->middleware('auth');
 		$data =$request->all();

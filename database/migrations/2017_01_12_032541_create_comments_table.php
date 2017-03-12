@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
 		    ->references('id')
 		    ->on('professors')
 	    	    ->onDelete('cascade');
-	    $table->longText('comment');
+	    $table->text('comment');
 	    $table->string('author');
 	    $table->boolean('likes');
 	    $table->timestamps();

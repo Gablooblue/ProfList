@@ -105,7 +105,7 @@
 								<div class="media-body">
 									<p>University: {{ $professor->university->name }}</p>
 									<p>Teaches: {{ $professor -> class}}</p>
-									<p><a href="professors/{{$professor->id}}">Write a review</a></p>
+									<p><a href="professors/{{$professor->id}}" style="font-weight:bold;">View more</a></p>
 								</div>
 							</div>
 						</div>

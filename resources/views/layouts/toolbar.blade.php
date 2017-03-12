@@ -43,9 +43,11 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professors&nbsp<span class = "caret"></span></a>
 					<ul class = "dropdown-menu">
-						<li> <a href="{{ url('professors?sort+by=recent') }}">Most recent</a></li>
+						<!--<li> <a href="{{ url('professors?sort+by=recent') }}">Most recent</a></li>
 						<li> <a href="{{ url('professors?sort+by=popular')}}">Most popular</a></li>
-						<li> <a href="{{ url('professors?sort+by=rating')}}">Highest Rating</a></li>
+						<li> <a href="{{ url('professors?sort+by=rating')}}">Highest Rating</a></li>-->
+						<li> <a href="{{ url('professors/create') }}">Add a professor</a></li>
+						<li> <a href="{{ url('professors') }}">View all</a></li>
 					</ul>	
 				</li>
 </span></a></li>
@@ -60,7 +62,7 @@
 						{{Auth::user()->username}}&nbsp<span class= "caret"></span>
 					</a>
 					<ul class = "dropdown-menu">
-						<li> <a href= "{{ url('/account') }}">Account</a></li>
+						<!--<li> <a href= "{{ url('/account') }}">Account</a></li>-->
 						<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 					</ul>
 				</li>

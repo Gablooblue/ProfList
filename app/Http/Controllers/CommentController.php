@@ -9,6 +9,7 @@ use DB;
 use Auth;
 use Redirect;
 use App\Professor;
+use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
 {
@@ -17,7 +18,7 @@ class CommentController extends Controller
 	{
 		$this->middleware('auth');
 	}	
-	public function CreatePComment(Request $request, $id)
+	public function CreatePComment(CommentRequest $request, $id)
 	{
 		$data = $request->all();
 		$user = Auth::user();

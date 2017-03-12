@@ -7,10 +7,9 @@
 	<link rel="stylesheets" href ="/css/app.css">
 </head>
 <body>
-	<span style="display:table; margin:0 auto; font-size:30px; font-wieght:bold;">About us </span>
-	<div class = "about" style="display:table; margin: 0 auto;font-size:25px;">
-		This site was created by Gabriel Lopez as a way for students to rate their professors online
-			and to find ways to pick the right professor.
+	<div class = "container" style="padding-top:70px;">
+		<h2>About me</h2>
+		<p>Created by Gabriel Henry J. Lopez, currently a UPM freshman in BS Com Sci.</p>
 	</div>
 </body>
 @endsection

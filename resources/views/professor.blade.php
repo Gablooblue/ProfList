@@ -55,6 +55,7 @@
 					<div class = "form-group">
 						<div class = "col-md-8">
 							<input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
+							<button class = "btn btn-default" data-dismiss="modal">Cancel</button>
 						</div>
 					</div>
 				</form>
@@ -62,7 +63,7 @@
 		</div>
 		</div>
 	</div>
-	<h3 class = 'text-center'>Reviews</h3>
+	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	@if ($professor->comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
