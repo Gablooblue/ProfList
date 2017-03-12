@@ -5,8 +5,6 @@
 @section('content')
 <head>
 	<title> Home</title>
-	<link rel='stylesheet' href='/css/body.css'>
-	<link rel='stylesheet' href='/css/home.css'>
 </head>
 <body>
 	<div class ="container" style="padding-top:70px;">

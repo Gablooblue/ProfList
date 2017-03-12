@@ -3,8 +3,6 @@
 @section('content')
 <head>
 	<title> Contact us </title>
-	<link rel = "stylesheets" href="contact.css">
-	<link rel = "stylesheets" href= "body.css">
 </head>
 <body>
 	<div class = "container" style="padding-top:70px">

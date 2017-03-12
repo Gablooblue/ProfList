@@ -3,8 +3,6 @@
 @section('content')
 <head>
 	<title> Professors </title>
-	<link rel= "stylesheets" href="/css/professors.css">
-	<link rel= "stylesheets" href="/css/app.css">
 	<meta name="csrf-token" content"{{ csrf_token() }}">
 	<script>
 		window.Laravel = <?php echo json_encode
