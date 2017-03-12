@@ -8,6 +8,7 @@ use App\University_comment;
 use DB;
 use Auth;
 use Redirect;
+use App\Professor;
 
 class CommentController extends Controller
 {
@@ -20,8 +21,15 @@ class CommentController extends Controller
 	{
 		$data = $request->all();
 		$user = Auth::user();
+		$professor = Professor::find($id);
 
-		if($data['review'] == 'like')
+		if($professor->comment_count() == 0)
+		{
+			DB::table('professors')
+				->where('id', $id)
+				->decrement('likes');
+		}	
+		if($data['review'] == 'like') 
 		{
 			$likes = true;
 			DB::table('professors')

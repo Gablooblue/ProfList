@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\University;
 
 class CreateController extends Controller
 {
@@ -18,7 +19,8 @@ class CreateController extends Controller
 		return view('create_school');
 	}
 	public function professor()
-	{
-		return view('create_professor');
+	{	
+		$universities = University::all();
+		return view('create_professor', ['universities' => $universities]);
 	}	
 }

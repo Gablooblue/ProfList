@@ -33,36 +33,46 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
-						{{ Form::open(array('method' => 'get')) }}
-							<div class = "form-group has-feedback">
-								<label for ="search " class = "col-md-4 control-label">Search</label>
-								{{Form::text('search', '', array('class' => 'form-control'))}}
-								<i class = "glyphicon glyphicon-search form-control-feedback"></i>
-							</div>
-							<div class = 'form-group '>
-								<label for ='school' class = "col-md-4 control-label">School</label>
-								{{ Form::select('school', array('any' => 'Any', '1' => 'UP Manila', '2' => 'UP Diliman'), 'Any'  , ['class' => 'form-control', 'name' => 'school', 'id' =>'school', 'value' => "old('school')"]) }}
-							</div>
-							<div class = "text-center">								<span> More filters coming soon</span>
-							</div>
-						<!--<div class = "form-group">
+							<form role="form" method="get" action="{{ url('professors') }}">
+								<div class = "col-md-12">
+								<div class= "form-group has-feedback">
+									<input type="text" class="form-control" name="search" id="search" placeholder="Search">
+									<i class ="glyphicon glyphicon-search form-control-feedback"></i>
+								</div>
+								</div>
+								<div class = "col-md-12">
+								<div class = "form-group">
+								<label for ="school" class = "col-md-4 control-label">University</label>
+									<select class="form-control" name = "school" id = "school" value = "old('school')">
+										<option selected>Any</option>
+										@foreach ($universities as $university)
+											<option value="{{$university->id}}">{{$university->name}}</option>
+										@endforeach
+									</select>
+								</div>
+								<div class = "text-center">
+									<span> More filters coming soon</span>
+								</div>
+								</div>
+								</div>
+								<!--<div class = "form-group">
 								<label for = 'sort' class = "col-md-4 control-label">Sort by</label>
 								{{ Form::select('sort by', array('recent' => 'Most recent', 'popular' => 'Most popular', 'rating' => 'Highest rating'), 'recent' , ['class' => 'form-control', 'name' => 'sort', 'id' => 'sort']) }}
 							</div>-->
-							<div class = "clearfix">
-							<div class="pull-right">
-							<div class = 'form-group'>
-								<button class = "btn btn-default" data-dismiss="modal">Cancel</button>
-								{{ Form::submit('Filter', array('class' => 'btn btn-primary', 'name' => 'filter', 'id' => 'filter')) }} 
-							</div>
-							</div>
-							</div>
-						{{ Form::close() }}
+								<div class = "clearfix">
+									<div class="pull-right">
+										<div class = 'form-group'>
+											<button class = "btn btn-default" data-dismiss="modal">Cancel</button>
+											<input type= "submit" class = "btn btn-primary" name = "filter" id = "filter">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 		<!--Display profs here
 	formatting is listed below -->
 	<!--<div class = "container" style="padding-bottom:10px;">
@@ -84,7 +94,7 @@
 				<div class = "panel panel-default">
 					<div class = "panel-body">
 						<div class="media">
-							<div class="media-left"><img src="../default-user.png" class="rounded img-responsive" style="min-width:50; max-width:100px;"> </div>
+							<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="rounded img-responsive" style="min-width:50; max-width:100px;"> </div>
 							<div class = "media-right">
 								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 									<div class= "pull-right">

@@ -46,9 +46,14 @@
 						
 					</div>
 					<div class = "form-group {{$errors->has('school') ? 'has-error' : ''}}"> 	
-						<label for = "school" class = "col-md-4 control-label">School</label>
+						<label for = "school" class = "col-md-4 control-label">University</label>
 						<div class = "col-md-6">
-							<input type = "dropdown" name = "school" id = "school" class = "form-control" value = "{{ old('school') }}" required autofocus> 
+							<select class="form-control" name = "school" id = "school" value = "old('school')" required autofocus>
+								<option disabled selected>Choose a university</option>
+								@foreach ($universities as $university)
+									<option value="{{$university->id}}">{{$university->name}}</option>
+								@endforeach
+							</select>
 							@if ($errors->has('school'))
 								<span class = "help-block">
 									<strong>{{$errors->first('school') }} </strong>

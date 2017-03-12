@@ -7,6 +7,7 @@ use DB;
 use App\Professor;
 use Redirect;
 
+
 class ProfessorController extends Controller
 {
 	/**
@@ -17,6 +18,7 @@ class ProfessorController extends Controller
 	{
 		$professor = Professor::find($id);
 		$percentage = ($professor->likes/($professor->likes + $professor->dislikes)) * 100;
+		
 		return view("professor",['professor' => $professor, 'percentage' => $percentage]);
 	}	
 

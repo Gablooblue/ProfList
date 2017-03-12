@@ -10,7 +10,7 @@
 		-->	
 		<div class = "panel-body">
 			<div class = "media">
-				<div class = "media-left"> Picture here </div>
+				<div class = "media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="rounded img-responsive" style="min-width:50; max-width:100px;"></div>
 				<div class= "media-right">
 					<h2 class = "media-heading"> {{ $professor->lname }}, {{$professor->fname}} {{$professor->mname}} </h2>
 					<div class = "pull-right">
@@ -25,16 +25,22 @@
 		</div>
 	</div>
 	{{ Session::get('message') }}	
-	<div class = "panel default-panel">
-		<div class = "panel-body">
+	@if (Auth::user())
+		<div class = "text-center">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
+		</div>
+	@endif
+	<div class = "modal fade" id = "review" role="dialog">
+		<div class = "modal-dialog">
+		<div class = "modal-content">
+		<div class = "modal-body">
 			<h3 >Write a review</h3>
-				<div class = "container">
 				<form method = "POST" role="form" class="form-horizontal">
 					<div class = "form-group">
 						<div class ="col-md-8">
 							<label for ="btn-group" class="control-label">Rating</label>
-							<div class = "btn-group" data-toggle="buttons" name="review">
-									<label class="radio-inline"><input type="radio" name="review" id="like" value="like"><span class = "glyphicon glyphicon-thumbs-up"></span></label>
+							<div class = "btn-group" data-toggle="buttons" name="review" >
+									<label class="radio-inline"><input type="radio" name="review" id="like" value="like" required><span class = "glyphicon glyphicon-thumbs-up"></span></label>
 		<label class="radio-inline"><input type="radio" name="review" id="dislike" value="dislike"><span class = "glyphicon glyphicon-thumbs-down"></span></label>
 							</div>
 						</div>
@@ -52,23 +58,27 @@
 						</div>
 					</div>
 				</form>
-			</div>
+		</div>	
+		</div>
 		</div>
 	</div>
 	<h3 class = 'text-center'>Reviews</h3>
+	@if ($professor->comments->count() === 0)
+		<h4 class = "text-center">No reviews yet</h4>
+	@endif
 	@foreach ($professor->comments as $comment)	
 		<div class = "col-md-6">
 		<div class = "panel default-panel">
 			<div class = "panel-body">
 				<div class ="media">
-					<div class="media-left">Picture here</div>
+					<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="img-circle img-responsive" style="min-width:30; max-width:70px;"></div>
 					<div class= "media-right">
 						<h2 class="media-heading"><a href="users/{{$comment->author}}">{{$comment->author}}</a></h2>
 						<div class = "pull-right">
 							@if ($comment->likes == true)
-								<h3><span class = "glyphicon glyphicon-thumbs-up"></span></h3>
+								<h3><span class = "glyphicon glyphicon-thumbs-up" style="color:green;"></span></h3>
 							@else
-								<h3><span class = "glyphicon glyphicon-thumbs-down"></span></h3>
+								<h3><span class = "glyphicon glyphicon-thumbs-down" style="color:red;"></span></h3>
 							@endif
 						</div>
 						<div class = "media-body">

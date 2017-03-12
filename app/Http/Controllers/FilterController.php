@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Professor;
 use Illuminate\Support\Collection\Search;
+use App\University;
 
 class FilterController extends Controller
 {
@@ -64,7 +65,8 @@ class FilterController extends Controller
 			}	
 		}	
 		$professors = $filter->withCount('comments')->paginate(8);
-		return view("professors", ['professors' => $professors]);
+		$universities = University::all();
+		return view("professors", ['professors' => $professors, 'universities' => $universities]);
 	}	
 
 

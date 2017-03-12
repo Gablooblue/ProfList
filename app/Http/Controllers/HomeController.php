@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use App\University;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
     {	
 	if(Auth::check())    
 	{
-		return view('home', ['professors' => $professors]);
+		$universities = University::all();
+		return view('home', ['universities' => $universities]);
 	}	
 	else
 	{

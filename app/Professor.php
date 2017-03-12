@@ -21,4 +21,9 @@ class Professor extends Model
 	{
 		return $this->belongsTo('App\University');
 	}	
+	public function comment_count()
+	{
+		$this->comments->count();
+	}	
 }
+	
