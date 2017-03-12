@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => 'om0+HaxgoB238UweRFIJfqgQBviml1dlLlRX08xlLsI',
+    'key' => 'base64:om0+HaxgoB238UweRFIJfqgQBviml1dlLlRX08xlLsI=',
 
     'cipher' => 'AES-256-CBC',
 
