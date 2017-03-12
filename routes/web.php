@@ -43,4 +43,8 @@ Route::post('/professors/{id}', "CommentController@CreatePComment");
 
 Route::post('/universities/{id}', 'CommentController@CreateUComment');
 
+Route::get('schools/create', 'AdminController@show');
+
+Route::post('schools/create', 'UniversityController@create');
+
 

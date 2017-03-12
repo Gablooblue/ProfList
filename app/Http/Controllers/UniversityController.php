@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\University;
+use App\Http\Requests\ProfessorRequest;
 
 class UniversityController extends Controller
 {
@@ -16,5 +17,15 @@ class UniversityController extends Controller
 	{
 		$university = University::find($id);
 		return view('university', ['university', $university]);
+	}	
+
+	public function create(SchoolRequest $request)
+	{
+		$data = $request->all();
+		
+		University::create([
+			'name' => $data['name'],
+		]);
+		return Redirect::to('/professors');
 	}	
 }

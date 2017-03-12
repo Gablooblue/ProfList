@@ -17,9 +17,9 @@ class CreateSchoolsTable extends Migration
 	    {	    
        		$table->increments('id');
 		$table->string('name')->unique();
-		$table->binary('icon');
-		$table->string('contact');
-		$table->string('address');
+		$table->binary('icon')->nullable();
+		$table->string('contact')->nullable();
+		$table->string('address')->nullable();
 		$table->timestamps();
 	    });
     }
