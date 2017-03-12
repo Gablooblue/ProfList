@@ -10,7 +10,8 @@ class AdminController extends Controller
 {
 	public function show()
 	{
-		if(Auth::user()->username === "admin")
+		$user = Auth::user();
+		if($user->username === "admin")
 		{
 			return view('create_school');
 		}	
