@@ -36,7 +36,7 @@
 						<div class = "form-group{{ $errors->has('mname') ? ' has-error' : ''}}" >
 						<label for ="mname" class=" col-md-4 control-label">Middle Initial</label>
 						<div class="col-md-6">
-							 <input id = "mname" type= "text" name = "mname" class = "form-control" value="{{ old('mname') }}" required autofocus/> 
+							 <input id = "mname" type= "text" name = "mname" class = "form-control" value="{{ old('mname') }}" placeholder="Optional"> 
 						@if ($errors->has('mname'))
 						    <span class="help-block">
 						<strong>{{ $errors->first('mname') }}</strong>
