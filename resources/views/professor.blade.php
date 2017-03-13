@@ -8,6 +8,12 @@
 			Add reviews section
 				& submit review button
 		-->	
+		@if (Auth::check())
+			@if (Auth::user()->username === 'admin')
+				<a href= "{{ $professor->id }}/delete" style="color:red;">Remove Professor</a>
+			@endif
+
+		@endif
 		<div class = "panel-body">
 			<div class = "media">
 				<div class = "media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="rounded img-responsive" style="min-width:50; max-width:100px;"></div>
@@ -84,6 +90,11 @@
 						</div>
 						<div class = "media-body">
 							<p>{{$comment->comment}}</p>
+							@if (Auth::check())
+								@if (Auth::user()->username === $comment->author Or Auth::user()->username === 'admin')
+									<p ><a href="{{$professor->id}}/delete/{{$comment->id}}" style="color:red;">Delete</a></p>
+								@endif
+							@endif
 						</div>
 					</div>
 				</div>

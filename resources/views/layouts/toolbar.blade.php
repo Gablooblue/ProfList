@@ -46,6 +46,7 @@
 						<!--<li> <a href="{{ url('professors?sort+by=recent') }}">Most recent</a></li>
 						<li> <a href="{{ url('professors?sort+by=popular')}}">Most popular</a></li>
 						<li> <a href="{{ url('professors?sort+by=rating')}}">Highest Rating</a></li>-->
+						<li> <a href="{{ url('search') }}">Search for professors</a></li>
 						<li> <a href="{{ url('professors/create') }}">Add a professor</a></li>
 						<li> <a href="{{ url('professors') }}">View all</a></li>
 					</ul>	

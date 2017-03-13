@@ -39,9 +39,11 @@ class ProfessorController extends Controller
 		return Redirect::to('/professors');
 	}	
 
-	public function university(Request $request)
+	
+	public function remove($id)
 	{
-		return $this->belongsTo(University::class, 'university_id', 'id');
-	}	
+		Professor::find($id)->delete();
+		return Redirect::to('/professors');
+	}
 
 }

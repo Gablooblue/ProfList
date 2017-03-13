@@ -15,17 +15,17 @@
 <body>
 	<div class= "container" style = "padding-top: 70px; ">
 		<div class = "row">
-		<div class = "col-md-6"> 
-			<form class = "form-horizontal" role="form" method="get">
-				<div class= "form-group has-feedback">
-					<input type="text" class="form-control" name="search" id="search" placeholder="Search">
-					<i class ="glyphicon glyphicon-search form-control-feedback"></i>
-				</div>
-			</form>
-		</div>
-		<div class = "col-md-2">
-			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#filter">Advanced filters</button>
-		</div>
+			<div class = "col-md-6"> 
+				<form class = "form-horizontal" role="form" method="get">
+					<div class= "form-group has-feedback">
+						<input type="text" class="form-control" name="search" id="search" placeholder="Search">
+						<i class ="glyphicon glyphicon-search form-control-feedback"></i>
+					</div>
+				</form>
+			</div>
+			<div class = "col-md-2">
+				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#filter">Advanced filters</button>
+			</div>
 		</div>
 		<div class="modal fade" id="filter" role="dialog">
 			<div class="modal-dialog">
@@ -33,25 +33,24 @@
 					<div class="modal-body">
 							<form role="form" method="get" action="{{ url('professors') }}">
 								<div class = "col-md-12">
-								<div class= "form-group has-feedback">
-									<input type="text" class="form-control" name="search" id="search" placeholder="Search">
-									<i class ="glyphicon glyphicon-search form-control-feedback"></i>
-								</div>
+									<div class= "form-group has-feedback">
+										<input type="text" class="form-control" name="search" id="search" placeholder="Search">
+										<i class ="glyphicon glyphicon-search form-control-feedback"></i>
+									</div>
 								</div>
 								<div class = "col-md-12">
-								<div class = "form-group">
-								<label for ="school" class = "col-md-4 control-label">University</label>
-									<select class="form-control" name = "school" id = "school" value = "old('school')">
-										<option selected value=''>Any</option>
-										@foreach ($universities as $university)
-											<option value="{{$university->id}}">{{$university->name}}</option>
-										@endforeach
-									</select>
+									<div class = "form-group">
+										<label for ="school" class = "col-md-4 control-label">University</label>
+										<select class="form-control" name = "school" id = "school" value = "old('school')">
+											<option selected value=''>Any</option>
+											@foreach ($universities as $university)
+												<option value="{{$university->id}}">{{$university->name}}</option>
+											@endforeach
+										</select>
+									</div>
 								</div>
 								<div class = "text-center">
 									<span> More filters coming soon</span>
-								</div>
-								</div>
 								</div>
 								<!--<div class = "form-group">
 								<label for = 'sort' class = "col-md-4 control-label">Sort by</label>
@@ -103,7 +102,7 @@
 								<div class="media-body">
 									<p>University: {{ $professor->university->name }}</p>
 									<p>Teaches: {{ $professor -> class}}</p>
-									<p><a href="professors/{{$professor->id}}" style="font-weight:bold;">View more</a></p>
+									<p><a href="{{$professor->id}}" style="font-weight:bold;">View more</a></p>
 								</div>
 							</div>
 						</div>

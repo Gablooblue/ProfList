@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {	
-	if(Auth::check())    
+	if(!Auth::check())    
 	{
 		$universities = University::all();
 		return view('home', ['universities' => $universities]);
@@ -32,4 +32,11 @@ class HomeController extends Controller
 		return redirect("/");
 	}	
     }
+
+	public function show()
+	{
+		$universities = University::all();
+		return view('search', ['universities' => $universities]);
+	}	
+
 }

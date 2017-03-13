@@ -18,7 +18,7 @@ class CommentController extends Controller
 	{
 		$this->middleware('auth');
 	}	
-	public function CreatePComment(CommentRequest $request, $id)
+	public function create(CommentRequest $request, $id)
 	{
 		$data = $request->all();
 		$user = Auth::user();
@@ -55,12 +55,10 @@ class CommentController extends Controller
 		return Redirect::back()->with('message', 'Review successfully posted');
 	}	
 
-	public function CreateUComment(array $data)
+	public function remove($id)
 	{
-		return University_comment::create([
-			'author' => $user['username'],
-			'comment' => $data['comment'],
-			'university_id' => $data['university_id'],
-		]);
+
+		Professor_Comment::find($id)->delete();
+		return Redirect::back()->with('message', "Review deleted");
 	}	
 }

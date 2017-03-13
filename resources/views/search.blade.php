@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class ="container" style="padding-top:70px;">
-	<h2>Get started</h2>
+	<h2>Search</h2>
 	<div class = "col-md-8 col-md-offset-2">
 		<div class = "panel default-panel" style="background-color:transparent;"> 
 			<div class = "panel-body">

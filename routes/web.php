@@ -17,6 +17,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/search', 'HomeController@show');
+
 Route::get('/about' , 'NavController@about');
 
 Route::get('/contact', "NavController@contact");
@@ -39,12 +41,14 @@ Route::get('/users/{user}', "UserController@show");
 
 Route::post('/professors/create', "ProfessorController@create" );
 
-Route::post('/professors/{id}', "CommentController@CreatePComment");
-
-Route::post('/universities/{id}', 'CommentController@CreateUComment');
+Route::post('/professors/{id}', "CommentController@create");
 
 Route::get('schools/create', 'AdminController@show');
 
 Route::post('schools/create', 'UniversityController@create');
+
+Route::get('/professors/{id}/delete', 'ProfessorController@remove');
+
+Route::get('/professors/{profId}/delete/{id}', 'CommentController@remove');
 
 
