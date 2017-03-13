@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {	
-	if(!Auth::check())    
+	if(Auth::check())    
 	{
 		$universities = University::all();
 		return view('home', ['universities' => $universities]);
