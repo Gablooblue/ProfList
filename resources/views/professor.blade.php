@@ -88,7 +88,7 @@
 						<div class = "media-body">
 							<div class = "container">
 								<div class ="col-md-6">
-								<p style="word-wrap:break-word;">{{ nl2br(e($comment->comment))}}</p>
+								<p style="word-wrap:break-word;">{{ $comment->comment}}</p>
 								</div>
 							</div>
 							@if (Auth::check())
