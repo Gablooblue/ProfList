@@ -55,9 +55,8 @@ class CommentController extends Controller
 		return Redirect::back()->with('message', 'Review successfully posted');
 	}	
 
-	public function remove($id)
+	public function remove($profId, $id)
 	{
-
 		Professor_Comment::find($id)->delete();
 		return Redirect::back()->with('message', "Review deleted");
 	}	
