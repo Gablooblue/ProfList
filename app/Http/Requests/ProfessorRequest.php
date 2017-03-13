@@ -27,7 +27,7 @@ class ProfessorRequest extends FormRequest
 		'fname' => 'required|max:50',
 		'lname' => 'required|max:50',
 		'mname' => 'max:5',
-		'class' => 'required|max:50',
+		'class' => 'max:50',
 		'school' => 'required',
         ];
     }

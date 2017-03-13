@@ -64,7 +64,7 @@
 					<div class = "form-group {{ $errors->has('class' ? ' has-error' : '')}}">
 						<label for= "class" class = "col-md-4 control-label">Class/Classes</label>
 						<div class = "col-md-6">
-							<input type= "text" name='class' id='class' class="form-control" placeholder="Ex. Math 17, CMSC 21"> 
+							<input type= "text" name='class' id='class' class="form-control" placeholder="Ex. Math 17, CMSC 21 (Optional)"> 
 							@if ($errors->has('class'))	
 								<span class = "help-block">
 									<strong> {{ $errors->first('class') }}</strong>
