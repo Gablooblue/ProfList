@@ -74,29 +74,27 @@
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
 	@foreach ($professor->comments as $comment)	
-		<div class = "col-md-6">
-		<div class = "panel default-panel">
-			<div class = "panel-body">
+		<div class = "col-md-12">
 				<div class ="media">
 					<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="img-circle img-responsive" style="min-width:30; max-width:70px;"></div>
 					<div class= "media-right">
 						<h2 class="media-heading"><a href="users/{{$comment->author}}">{{$comment->author}}</a></h2>
-						<div class = "pull-right">
 							@if ($comment->likes == true)
 								<h3><span class = "glyphicon glyphicon-thumbs-up" style="color:green;"></span></h3>
 							@else
 								<h3><span class = "glyphicon glyphicon-thumbs-down" style="color:red;"></span></h3>
 							@endif
-						</div>
 						<div class = "media-body">
-							<p>{{$comment->comment}}</p>
+							<div class = "container">
+								<div class ="col-md-6">
+								<p style="word-wrap:break-word;">{{$comment->comment}}</p>
+								</div>
+							</div>
 							@if (Auth::check())
 								@if (Auth::user()->username === $comment->author Or Auth::user()->username === 'admin')
 									<p ><a href="{{$professor->id}}/delete/{{$comment->id}}" style="color:red;">Delete</a></p>
 								@endif
 							@endif
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
