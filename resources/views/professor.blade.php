@@ -9,7 +9,7 @@
 				& submit review button
 		-->	
 		@if (Auth::check())
-			@if (Auth::user()->username === 'admin')
+			@if (Auth::user()->username === 'admin' Or Auth::user()->username === 'Gablooblue')
 				<a href= "{{ $professor->id }}/delete" style="color:red;">Remove Professor</a>
 			@endif
 
