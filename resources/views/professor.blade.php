@@ -52,6 +52,12 @@
 						</div>
 					</div>
 					<div class = "form-group">
+						<div class = "col-md-8">
+							<label for ="title" class = "control-label">Title</label>
+							<input type="text" name="title" id="title" class="form-control" placeholder="Optional">
+						</div>
+					</div>
+					<div class = "form-group">
 						<div class = "col-md-10">
 							<label for ="comment" class="control-label">Review</label>
 							<textarea class="form-control" name = "comment" id="comment" rows="5" required></textarea>
@@ -81,10 +87,11 @@
 					<div class= "media-right">
 						<h2 class="media-heading"><a href="users/{{$comment->author}}">{{$comment->author}}</a></h2>
 							@if ($comment->likes == true)
-								<h3><span class = "glyphicon glyphicon-thumbs-up" style="color:green;"></span></h3>
+								<h3 style="color:green;"><span class = "glyphicon glyphicon-thumbs-up" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
 							@else
-								<h3><span class = "glyphicon glyphicon-thumbs-down" style="color:red;"></span></h3>
+								<h3 style="color:red;"><span class = "glyphicon glyphicon-thumbs-down" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
 							@endif
+						<h3></h3>
 						<div class = "media-body">
 							<div class = "container">
 								<div class ="col-md-6">

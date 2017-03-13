@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Professor_comment extends Model
 {
 	protected $fillable = [
-		'author', 'comment', 'professor_id', 'likes',
+		'author', 'comment', 'professor_id', 'likes', 'title',
 	];
 
 	public function comments()

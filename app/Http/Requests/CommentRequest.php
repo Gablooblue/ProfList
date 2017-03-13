@@ -26,6 +26,7 @@ class CommentRequest extends FormRequest
         return [
 		'comment' => 'required|max:20000',
 		'review' => 'required',
+		'title' => 'max:100',
         ];
     }
 }

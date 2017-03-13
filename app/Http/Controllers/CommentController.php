@@ -51,6 +51,7 @@ class CommentController extends Controller
 			'comment' => $data['comment'],
 			'professor_id' => $id,
 			'likes' => $likes,
+			'title' => $data['title'],
 		]);
 		return Redirect::back()->with('message', 'Review successfully posted');
 	}	
