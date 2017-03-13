@@ -26,6 +26,13 @@
 		ga('create', 'UA-93585080-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-7631225403484753",
+	    enable_page_level_ads: true
+	  });
+	</script>
 </head>
 <body>
 	<nav id = "myToolbar" class = 'navbar navbar-default navbar-fixed-top'>
