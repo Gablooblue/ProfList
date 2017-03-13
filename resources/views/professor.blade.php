@@ -75,6 +75,7 @@
 	@endif
 	@foreach ($professor->comments as $comment)	
 		<div class = "col-md-12">
+		<div class = "container">
 				<div class ="media">
 					<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="img-circle img-responsive" style="min-width:30; max-width:70px;"></div>
 					<div class= "media-right">
@@ -87,7 +88,7 @@
 						<div class = "media-body">
 							<div class = "container">
 								<div class ="col-md-6">
-								<p style="word-wrap:break-word;">{{$comment->comment}}</p>
+								<p style="word-wrap:break-word;">{!! nl2br(e($comment->comment))!!}</p>
 								</div>
 							</div>
 							@if (Auth::check())
@@ -97,6 +98,7 @@
 							@endif
 				</div>
 			</div>
+		</div>
 		</div>
 		</div>
 	@endforeach	
