@@ -76,7 +76,7 @@
 						<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 					</ul>
 				</li>
-				@if (Auth::user()->username === 'admin')
+				@if (Auth::user()->username === 'admin' Or Auth::user()->username === 'Gablooblue')
 					<li><a href = "{{url('schools/create')}}">Create School</a></li>
 				@endif
  				<form id="logout-form" action = "{{ url('/logout') }}" method="POST" style="display:none;">
