@@ -31,7 +31,7 @@ class FilterController extends Controller
 	 */
 	public function professors(Request $request)
 	{	
-		$filter = Professor::query();
+		$filter = Professor::query()->latest();
 		if(request()->has('sort by'))
 		{
 			if(request()->has('recent'))

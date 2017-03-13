@@ -101,7 +101,9 @@
 
 								<div class="media-body">
 									<p>University: {{ $professor->university->name }}</p>
+									@if ($professor->class)
 									<p>Teaches: {{ $professor -> class}}</p>
+									@endif
 									<p><a href="/professors/{{$professor->id}}" style="font-weight:bold;">View more</a></p>
 								</div>
 							</div>
