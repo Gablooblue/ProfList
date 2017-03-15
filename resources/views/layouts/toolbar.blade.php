@@ -94,16 +94,16 @@
 				@endif
 		</div>	
 	</nav>
-	@yield('content')
+	@yield ('content')
 	<br><br>
 	<div class="footercenter">
-	<nav id = "myFooter" class="footer">	
+	<footer id = "myFooter" class="footer">	
 		<ul> 
 			<li> <a href="{{ url('/about') }}">About us</a></li>
 			<li> <a href="{{ url('/contact') }}">Contact us</a></li>
 			<li> <a href="{{ url('/FAQ') }}">FAQ</a></li>
 		</ul>
-	</nav>
+	</footer>
 	</div>
 
 </body>

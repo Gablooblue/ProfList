@@ -70,8 +70,12 @@
 				</div>
 			</div>
 		</div>
-		<!--Display profs here
-	formatting is listed below -->
+		@if (Auth::guest())
+			<h4 class="text-center"><a href="{{url('login')}}" style="color:#FFDD00;">Login</a> or <a href="{{url('register')}}" style="color:#FFDD00;">Sign up</a> to add your professor to the list</h4>
+		@elseif(Auth::user() And $professors->count() != 0)
+			<h4 class="text-center">Click <a href="{{url('professors/create')}}" style="color:#FFDD00;">here</a> to add your professor to the list</h4>
+		@endif
+	<!--display professors here-->
 	<!--<div class = "container" style="padding-bottom:10px;">
 		<div class = "row">
 			<div class = "col-md-5">
@@ -83,7 +87,7 @@
 		@if ($professors->count() === 0)
 			<div class = 'text-center'>
 				<h3>No results found</h3>
-				<h4>If you can't find the professor you're looking for click <a href="{{ url('professors/create') }}" style="color:#FFDF00">here</a> to add them </h4>
+				<h4>Can't find the professor you're looking for? Click <a href="{{url('professors/create')}}" style="color:#FFDD00;">here</a> to add them to the list</h4>
 			</div>
 		@endif
 		@foreach ($professors as $professor)
