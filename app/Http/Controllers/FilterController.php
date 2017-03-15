@@ -31,7 +31,7 @@ class FilterController extends Controller
 	 */
 	public function professors(Request $request)
 	{	
-		$filter = Professor::query()->latest();
+		$filter = Professor::query();
 		if(request()->has('sort by'))
 		{
 			if(request()->has('recent'))
@@ -64,8 +64,8 @@ class FilterController extends Controller
 					->orWhere('mname', 'LIKE', '%'.$value.'%');
 			}	
 		}	
-		$professors = $filter->withCount('comments')->paginate(8);
-		$universities = University::all();
+		$professors = $filter->withCount('comments')->orderBy('lname')->paginate(8);
+		$universities = University::orderBy('name')->get();
 		return view("professors", ['professors' => $professors, 'universities' => $universities]);
 	}	
 

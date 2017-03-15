@@ -20,7 +20,7 @@ class CreateController extends Controller
 	}
 	public function professor()
 	{	
-		$universities = University::all();
+		$universities = University::orderBy('name')->get();
 		return view('create_professor', ['universities' => $universities]);
 	}	
 }

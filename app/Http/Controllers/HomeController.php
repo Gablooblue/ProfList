@@ -24,7 +24,7 @@ class HomeController extends Controller
     {	
 	if(Auth::check())    
 	{
-		$universities = University::all();
+		$universities = University::orderBy('name')->get();
 		return view('home', ['universities' => $universities]);
 	}	
 	else
@@ -35,7 +35,7 @@ class HomeController extends Controller
 
 	public function show()
 	{
-		$universities = University::all();
+		$universities = University::orderBy('name')->get();
 		return view('search', ['universities' => $universities]);
 	}	
 
