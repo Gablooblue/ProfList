@@ -35,6 +35,10 @@
 		<div class = "text-center">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
 		</div>
+	@else
+		<div class = "text-center">
+			<h4><a href = "{{ url('login') }}" style="color:#FFDD00;">Login</a> or <a href="{{url('register')}}" style = "color:#FFDD00">Sign up</a> to post a review</h4>
+		</div>
 	@endif
 	<div class = "modal fade" id = "review" role="dialog">
 		<div class = "modal-dialog">
@@ -95,7 +99,7 @@
 						<div class = "media-body">
 							<div class = "container">
 								<div class ="col-md-6">
-								<p style="word-wrap:break-word;">{{ $comment->comment}}</p>
+								<p style="word-wrap:break-word;">{!! nl2br(e($comment->comment)) !!}</p>
 								</div>
 							</div>
 							@if (Auth::check())
