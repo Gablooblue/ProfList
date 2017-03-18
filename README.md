@@ -1,4 +1,4 @@
-#STILL A WORK IN PROGRESS
+
 
 ##Sophists
 A site that allows you to rate the professors in your university. Students can review professors and teachers with a like a dislike system which is then tallied by the program to create a percentage rating.
