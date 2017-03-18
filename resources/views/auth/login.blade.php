@@ -47,9 +47,12 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
+			<div class = "form-group">
+				<div class = "col-md-8 col-md-offset-4">
+					<a href="{{ url('register') }}">Don't have an account yet? Sign up now!</a>
+				</div>
+			</div>                        <div class="form-group">
+                        <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
@@ -59,11 +62,7 @@
                                 </a>-->
                             </div>
 			</div>
-			<div class = "form-group">
-				<div class = "col-md-8 col-md-offset-4">
-					<a href="{{ url('register') }}">Don't have an account yet? Sign up now!</a>
-				</div>
-			</div>
+
                     </form>
                 </div>
             </div>

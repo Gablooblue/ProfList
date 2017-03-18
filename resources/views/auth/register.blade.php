@@ -72,7 +72,11 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+			<div class = "form-group">
+				<div class = "col-md-6 col-md-offset-4">
+					<a href="{{url('login')}}">Already have an account? Login now!</a>
+				</div>
+			</div>	
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
@@ -80,11 +84,7 @@
                                 </button>
                             </div>
                         </div>
-			<div class = "form-group">
-				<div class = "col-md-6 col-md-offset-4">
-					<a href="{{url('login')}}">Already have an account? Login now!</a>
-				</div>
-			</div>	
+		
                     </form>
                 </div>
             </div>
