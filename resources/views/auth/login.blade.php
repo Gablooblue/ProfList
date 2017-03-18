@@ -58,7 +58,12 @@
                                     Forgot Your Password?
                                 </a>-->
                             </div>
-                        </div>
+			</div>
+			<div class = "form-group">
+				<div class = "col-md-8 col-md-offset-4">
+					<a href="{{ url('register') }}">Don't have an account yet? Sign up now!</a>
+				</div>
+			</div>
                     </form>
                 </div>
             </div>

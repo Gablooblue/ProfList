@@ -80,6 +80,11 @@
                                 </button>
                             </div>
                         </div>
+			<div class = "form-group">
+				<div class = "col-md-6 col-md-offset-4">
+					<a href="{{url('login')}}">Already have an account? Login now!</a>
+				</div>
+			</div>	
                     </form>
                 </div>
             </div>
