@@ -16,14 +16,13 @@
 		@endif
 		<div class = "panel-body">
 			<div class = "media">
-				<div class = "media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="rounded img-responsive" style="min-width:50; max-width:100px;"></div>
 				<div class= "media-right">
 					<h2 class = "media-heading"> {{ $professor->lname }}, {{$professor->fname}} {{$professor->mname}} </h2>
 					<div class = "pull-right">
 						<h3 class= "media-heading">{{round($percentage,2)}}%</h3>
 					</div>
 					<div class = "media-body">
-						<p>University: {{$professor->university->name}}</p>
+						<p>University:<a href= "../universities/{{ $professor->university->id }}"> {{$professor->university->name}}</a></p>
 						<p>Teaches: {{ $professor->class }}</p>
 					</div>
 				</div>

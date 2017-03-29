@@ -95,7 +95,6 @@
 				<div class = "panel panel-default">
 					<div class = "panel-body">
 						<div class="media">
-							<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="rounded img-responsive" style="min-width:50; max-width:100px;"> </div>
 							<div class = "media-right">
 								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 									<div class= "pull-right">
@@ -104,7 +103,9 @@
 									</div>
 
 								<div class="media-body">
-									<p>University: {{ $professor->university->name }}</p>
+									<p>University: 
+						<a href= "../universities/{{ $professor->university->id }}"> {{$professor->university->name}}</a>
+</p>
 									@if ($professor->class)
 									<p>Teaches: {{ $professor -> class}}</p>
 									@endif

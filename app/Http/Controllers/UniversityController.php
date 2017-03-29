@@ -17,7 +17,7 @@ class UniversityController extends Controller
 	public function show(Request $request, $id)
 	{
 		$university = University::find($id);
-		return view('university', ['university', $university]);
+		return view('university', ['university' => $university]);
 	}	
 
 	public function create(SchoolRequest $request)
