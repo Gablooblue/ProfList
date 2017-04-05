@@ -76,7 +76,7 @@
 	    <p class="lead">Sophists supports a large amount of universities and has the capacity to expand to even more in the future</p>
 	</div>
 	<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-	    <img class="img-responsive" src="../top-univs.jpg" alt="">
+	    <img class="img-responsive" src="../top-univs.png" alt="">
 	</div>
     </div>
 
