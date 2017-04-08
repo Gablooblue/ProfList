@@ -2,7 +2,7 @@
 
 @section('content')
 <div class = "container" style="padding-top:70px;">
-	<div class = "panel default-panel">
+	<div class = "panel panel-default">
 		<!-- TODO
 			Add review percentage
 			Add reviews section
