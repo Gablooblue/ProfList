@@ -25,7 +25,6 @@ class ProfessorController extends Controller
 
 	public function create(ProfessorRequest $request)
 	{
-		$this->middleware('auth');
 		$data =$request->all();
 
 		Professor::create([
