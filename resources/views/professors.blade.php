@@ -70,7 +70,7 @@
 				</div>
 			</div>
 		</div>
-		@if $professors->count() != 0)
+		@if ($professors->count() != 0)
 			<h4 class="text-center">Click <a href="{{url('professors/create')}}" style="color:#FFDD00;">here</a> to add your professor to the list</h4>
 		@endif
 	<!--display professors here-->
