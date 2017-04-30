@@ -107,6 +107,7 @@
 								@endif
 							@endif
 				</div>
+				<hr>
 			</div>
 		</div>
 		</div>
