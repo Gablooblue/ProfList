@@ -79,10 +79,10 @@
 		</div>
 	</div>
 	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
-	@if ($professor->comments->count() === 0)
+	@if ($comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
-	@foreach ($professor->comments as $comment)	
+	@foreach ($comments as $comment)	
 		<div class = "col-md-12">
 		<div class = "container">
 				<div class ="media">
@@ -109,7 +109,7 @@
 				</div>
 				<hr>
 			<div class = "text-center">
-			    {{ $professors->comments->links() }}
+			    {{ $comments->links() }}
 			</div>
 			</div>
 		</div>

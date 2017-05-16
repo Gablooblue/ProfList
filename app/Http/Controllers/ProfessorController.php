@@ -17,10 +17,11 @@ class ProfessorController extends Controller
 	 */
 	public function show(Request $request, $id)
 	{
-		$professor = Professor::find($id)->comments()->paginate(5);
+		$professor = Professor::find($id);
+		$comments = Professor::find($id)->comments()->paginate(5);
 		$percentage = ($professor->likes/($professor->likes + $professor->dislikes)) * 100;
 		
-		return view("professor",['professor' => $professor, 'percentage' => $percentage]);
+		return view("professor",['professor' => $professor, 'percentage' => $percentage, 'comments' => $comments]);
 	}	
 
 	public function create(ProfessorRequest $request)
