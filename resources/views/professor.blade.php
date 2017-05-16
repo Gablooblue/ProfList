@@ -108,6 +108,9 @@
 							@endif
 				</div>
 				<hr>
+			<div class = "text-center">
+			    {{ $professors->comments->links() }}
+			</div>
 			</div>
 		</div>
 		</div>
