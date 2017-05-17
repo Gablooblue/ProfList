@@ -78,44 +78,47 @@
 		</div>
 		</div>
 	</div>
+	<div class = "panel panel-default">
+	<div class = "panel-body">
 	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	@if ($comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
 	@foreach ($comments as $comment)	
 		<div class = "col-md-12">
-		<div class = "container">
-				<div class ="media">
-					<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="img-circle img-responsive" style="min-width:30; max-width:70px;"></div>
-					<div class= "media-right">
-						<h2 class="media-heading"><a href="users/{{$comment->author}}">{{$comment->author}}</a></h2>
-							@if ($comment->likes == true)
-								<h3 style="color:green;"><span class = "glyphicon glyphicon-thumbs-up" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
-							@else
-								<h3 style="color:red;"><span class = "glyphicon glyphicon-thumbs-down" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
-							@endif
-						<h3></h3>
-						<div class = "media-body">
-							<div class = "container">
-								<div class ="col-md-6">
-								<p style="word-wrap:break-word;">{!! nl2br(e($comment->comment)) !!}</p>
-								</div>
+		    <div class = "container">
+			<div class ="media">
+				<div class="media-left"><img src="{{ url('/default-user.jpg') }}" alt="Image" class="img-circle img-responsive" style="min-width:30; max-width:70px;"></div>
+				<div class= "media-right">
+					<h2 class="media-heading"><a href="users/{{$comment->author}}">{{$comment->author}}</a></h2>
+						@if ($comment->likes == true)
+							<h3 style="color:green;"><span class = "glyphicon glyphicon-thumbs-up" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
+						@else
+							<h3 style="color:red;"><span class = "glyphicon glyphicon-thumbs-down" ></span><strong>&nbsp{{$comment->title}}</strong></h3>
+						@endif
+					<h3></h3>
+					<div class = "media-body">
+						<div class = "container">
+							<div class ="col-md-6">
+							<p style="word-wrap:break-word;">{!! nl2br(e($comment->comment)) !!}</p>
 							</div>
-							@if (Auth::check())
-								@if (Auth::user()->username === $comment->author Or Auth::user()->username === 'admin')
-									<p ><a href="{{$professor->id}}/delete/{{$comment->id}}" style="color:red;">Delete</a></p>
-								@endif
+						</div>
+						@if (Auth::check())
+							@if (Auth::user()->username === $comment->author Or Auth::user()->username === 'admin')
+								<p ><a href="{{$professor->id}}/delete/{{$comment->id}}" style="color:red;">Delete</a></p>
 							@endif
-				</div>
+						@endif
+					</div>
 				<hr>
-			<div class = "text-center">
-			    {{ $comments->links() }}
+				</div>
 			</div>
-			</div>
-		</div>
-		</div>
+		    </div>
 		</div>
 	@endforeach	
-
+	</div>
+	</div>
+	<div class = "text-center">
+	    {{ $comments->links() }}
+	</div>
 </div>
 @endsection
