@@ -13,11 +13,12 @@
 <![endif]-->
 
 <!-- Header -->
+
 <a name="about"></a>
 <div class="intro-header">
 <div class="container">
     <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12 pull-right">
 	    <div class="intro-message">
 		<h1>Sophists</h1>
 		<h3>Find and rate your professors</h3>
