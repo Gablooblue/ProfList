@@ -70,9 +70,7 @@
 				</div>
 			</div>
 		</div>
-		@if (Auth::guest() And $professors->count() != 0)
-			<h4 class="text-center"><a href="{{url('login')}}" style="color:#FFDD00;">Login</a> or <a href="{{url('register')}}" style="color:#FFDD00;">Sign up</a> to add your professor to the list</h4>
-		@elseif (Auth::user() And $professors->count() != 0)
+		@if ($professors->count() != 0)
 			<h4 class="text-center">Click <a href="{{url('professors/create')}}" style="color:#FFDD00;">here</a> to add your professor to the list</h4>
 		@endif
 	<!--display professors here-->

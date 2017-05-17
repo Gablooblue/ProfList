@@ -2,7 +2,7 @@
 
 @section('content')
 <div class = "container" style="padding-top:70px;">
-	<div class = "panel default-panel">
+	<div class = "panel panel-default">
 		<!-- TODO
 			Add review percentage
 			Add reviews section
@@ -79,10 +79,10 @@
 		</div>
 	</div>
 	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
-	@if ($professor->comments->count() === 0)
+	@if ($comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
-	@foreach ($professor->comments as $comment)	
+	@foreach ($comments as $comment)	
 		<div class = "col-md-12">
 		<div class = "container">
 				<div class ="media">
@@ -107,6 +107,10 @@
 								@endif
 							@endif
 				</div>
+				<hr>
+			<div class = "text-center">
+			    {{ $comments->links() }}
+			</div>
 			</div>
 		</div>
 		</div>

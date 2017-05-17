@@ -3,7 +3,7 @@
 @section ('content')
 
 <div class = "container" style = "padding-top:70px;">
-    <div class = "panel default-panel">
+    <div class = "panel panel-default">
 	<div class = "panel-body">
 	    <h2> {{ $university->name }} </h2>
 	</div>

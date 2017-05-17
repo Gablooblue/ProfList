@@ -2,8 +2,7 @@
 
 @section('content')
 <head>
-	<title> Schools </title>
-	<link rel= "stylesheets" href="/css/schools.css">
+	<title> Universities </title>
 	<link rel= "stylesheets" href="/css/app.css">
 	<meta name="csrf-token" content"{{ csrf_token() }}">
 	<script>
