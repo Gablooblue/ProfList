@@ -94,18 +94,18 @@
 					<div class = "panel-body">
 						<div class="media">
 							<div class = "media-right">
-								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
+								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}" class = "hideOverflow">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 									<div class= "pull-right">
 										<h1 class="media-heading">{{ round($professor -> likes / ($professor -> dislikes + $professor -> likes) * 100 ,2)}}%</h1>
 										<a href="professors/{{$professor->id}}">{{$professor->comments_count}} review/s</a>
 									</div>
 
 								<div class="media-body">
-									<p>University: 
-						<a href= "../universities/{{ $professor->university->id }}"> {{$professor->university->name}}</a>
+									<p class = "hideOverflow">University: 
+						<a href= "../universities/{{ $professor->university->id }}" > {{$professor->university->name}}</a>
 </p>
 									@if ($professor->class)
-									<p>Teaches: {{ $professor -> class}}</p>
+									<p class = "hideOverflow">Teaches: {{ $professor -> class}}</p>
 									@endif
 									<p><a href="/professors/{{$professor->id}}" style="font-weight:bold;">View more</a></p>
 								</div>
