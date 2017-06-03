@@ -4,12 +4,12 @@
 <head>
 	<title> Professors </title>
 	<meta name="csrf-token" content"{{ csrf_token() }}">
-	<script>
-		window.Laravel = <?php echo json_encode
-		([
-			'csrfToken' => csrf_token(),
-		]); ?>
-	</script>
+<script>
+window.Laravel = <?php echo json_encode
+([
+    'csrfToken' => csrf_token(),
+]); ?>
+    </script>
 
 </head>
 <body>
@@ -89,23 +89,31 @@
 			</div>
 		@endif
 		@foreach ($professors as $professor)
-			<div class = "col-md-12">
+			<div class = "col-md-6">
 				<div class = "panel panel-default">
 					<div class = "panel-body">
 						<div class="media">
+							<div class = "media-left media-middle">
+							@if ($professor->comments_count === 0)
+							    <i>No reviews yet</i>
+							@else
+								<h3 class="media-heading">{{ round($professor -> likes / ($professor -> dislikes + $professor -> likes) * 100 ,2)}}%</h3>
+								<a href="professors/{{$professor->id}}">{{$professor->comments_count}} review/s</a>
+							@endif
+							</div>
 							<div class = "media-right">
-								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}" class = "hideOverflow">{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
-									<div class= "pull-right">
-										<h1 class="media-heading">{{ round($professor -> likes / ($professor -> dislikes + $professor -> likes) * 100 ,2)}}%</h1>
-										<a href="professors/{{$professor->id}}">{{$professor->comments_count}} review/s</a>
-									</div>
+								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}" >{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 
 								<div class="media-body">
-									<p class = "hideOverflow">University: 
+								    <div class = "hideOverflow">
+								    <span> 
 						<a href= "../universities/{{ $professor->university->id }}" > {{$professor->university->name}}</a>
-</p>
+    </span>
+								    </div>
 									@if ($professor->class)
-									<p class = "hideOverflow">Teaches: {{ $professor -> class}}</p>
+									<div class = "hideOverflow">
+									<span>Teaches: {{ $professor -> class}}</span>
+	</div>
 									@endif
 									<p><a href="/professors/{{$professor->id}}" style="font-weight:bold;">View more</a></p>
 								</div>

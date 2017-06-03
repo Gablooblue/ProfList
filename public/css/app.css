@@ -7695,6 +7695,7 @@ button.close {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 10em;
 }
 
 /*# sourceMappingURL=app.css.map */
