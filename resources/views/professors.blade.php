@@ -101,7 +101,7 @@ window.Laravel = <?php echo json_encode
 								<a href="professors/{{$professor->id}}">{{$professor->comments_count}} review/s</a>
 							@endif
 							</div>
-							<div class = "media-right" style = "border-left: 1px groove grey">
+							<div class = "media-right" style = "border-left: 1px solid #2E4372">
 								<h2 style= "cursor:pointer;" class="media-heading"><a href="professors/{{$professor->id}}" >{{ $professor -> lname }}, {{$professor->fname}} {{$professor->mname}}</a></h2>	
 
 								<div class="media-body">
