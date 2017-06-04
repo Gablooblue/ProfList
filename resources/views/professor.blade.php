@@ -19,7 +19,11 @@
 				<div class= "media-right">
 					<h2 class = "media-heading"> {{ $professor->lname }}, {{$professor->fname}} {{$professor->mname}} </h2>
 					<div class = "pull-right">
-						<h3 class= "media-heading">{{round($percentage,2)}}%</h3>
+						@if ($professor->comments->count() === 0)
+						    <i>No reviews yet </i>
+						@else
+						    <h3 class= "media-heading">{{round($percentage,2)}}%</h3>
+						@endif
 					</div>
 					<div class = "media-body">
 						<p>University:<a href= "../universities/{{ $professor->university->id }}"> {{$professor->university->name}}</a></p>
@@ -79,8 +83,8 @@
 		</div>
 	</div>
 	<div class = "panel panel-default">
+	    <h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	<div class = "panel-body">
-	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	@if ($comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
