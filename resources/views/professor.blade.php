@@ -34,8 +34,10 @@
 		</div>
 	</div>
 	{{ Session::get('message') }}	
-	<div class = "text-center">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
+	<div class = "container">
+	    <div class = "text-center">
+		    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
+	    </div>
 	</div>
 	<div class = "modal fade" id = "review" role="dialog">
 		<div class = "modal-dialog">
@@ -47,8 +49,16 @@
 						<div class ="col-md-8">
 							<label for ="btn-group" class="control-label">Rating</label>
 							<div class = "btn-group" data-toggle="buttons" name="review" >
-									<label class="radio-inline"><input type="radio" name="review" id="like" value="like" required><span class = "glyphicon glyphicon-thumbs-up"></span></label>
-		<label class="radio-inline"><input type="radio" name="review" id="dislike" value="dislike"><span class = "glyphicon glyphicon-thumbs-down"></span></label>
+									<label class="radio-inline">
+									    <input type="radio" name="review" id="like" value="like" required>
+										<!-- <span class = "glyphicon glyphicon-thumbs-up"></span> -->
+										<span>I liked this professor</span>
+									</label>
+									<label class="radio-inline">
+									    <input type="radio" name="review" id="dislike" value="dislike">
+										<!--<span class = "glyphicon glyphicon-thumbs-down"></span>-->
+										<span>I did not like this professor</span>
+									</label>
 							</div>
 						</div>
 					</div>
