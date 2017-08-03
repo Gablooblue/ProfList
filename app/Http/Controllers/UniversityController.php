@@ -29,4 +29,14 @@ class UniversityController extends Controller
 		]);
 		return Redirect::to('/professors');
 	}	
+
+	public function create(SchoolRequest $request)
+	{
+		$data = $request->all();
+		
+		University::create([
+			'name' => $data['name'],
+		]);
+		return Redirect::to('/professors');
+	}	
 }
