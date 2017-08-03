@@ -12,6 +12,7 @@ class CreateController extends Controller
 	 */
 	public function school()
 	{
+		$this->middleware('auth');
 		return view('create_school');
 	}
 	public function professor()
