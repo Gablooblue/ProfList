@@ -48,48 +48,52 @@
 	    <div class = "modal-content">
 	    <div class = "modal-body">
 		    <h3 >Write a review</h3>
-			    <form method = "POST" role="form" class="form-horizontal">
-				    <div class = "form-group">
-					    <div class ="col-md-8">
-						    <label for ="btn-group" class="control-label">Rating</label>
-						    <div class = "btn-group" data-toggle="buttons" name="review" >
-									<input type="radio" name="review" id="like" value="like" required>
-									    <!-- <span class = "glyphicon glyphicon-thumbs-up"></span> -->
+			<form method = "POST" role="form" class="form-horizontal">
+				<div class = "form-group">
+					<div class ="col-md-8">
+						<label for ="btn-group" class="control-label">Rating</label>
+						<div class = "btn-group" data-toggle="buttons" name="review" >
+								    <input type="radio" name="review" id="like" value="like" required>
+									<!-- <span class = "glyphicon glyphicon-thumbs-up"></span> -->
+									<label class = "control-label">
 									    <span>I liked this professor</span>
-									<input type="radio" name="review" id="dislike" value="dislike">
-									    <!--<span class = "glyphicon glyphicon-thumbs-down"></span>-->
+									</label>
+								    <input type="radio" name="review" id="dislike" value="dislike">
+									<!--<span class = "glyphicon glyphicon-thumbs-down"></span>-->
+									<label class = "control-label">
 									    <span>I did not like this professor</span>
-						    </div>
-					    </div>
-				    </div>
-				    <div class = "form-group">
-					    <div class = "col-md-8">
-						    <label for ="title" class = "control-label">Title</label>
-						    <input type="text" name="title" id="title" class="form-control" placeholder="Optional">
-					    </div>
-				    </div>
-				    <div class = "form-group">
-					    <div class = "col-md-10">
-						    <label for ="comment" class="control-label">Review</label>
-						    <textarea class="form-control" name = "comment" id="comment" rows="5" required></textarea>
-					    </div>
-				    </div>
-				    {{ csrf_field() }}
-				    <div class = "form-group">
-					    <div class = "col-md-8">
-						    <input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
-						    <button class = "btn btn-default" data-dismiss="modal">Cancel</button>
-					    </div>
-				    </div>
-			    </form>
+									</label>
+						</div>
+					</div>
+				</div>
+				<div class = "form-group">
+					<div class = "col-md-8">
+						<label for ="title" class = "control-label">Title</label>
+						<input type="text" name="title" id="title" class="form-control" placeholder="Optional">
+					</div>
+				</div>
+				<div class = "form-group">
+					<div class = "col-md-10">
+						<label for ="comment" class="control-label">Review</label>
+						<textarea class="form-control" name = "comment" id="comment" rows="5" required></textarea>
+					</div>
+				</div>
+				{{ csrf_field() }}
+				<div class = "form-group">
+					<div class = "col-md-8">
+						<input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
+						<button class = "btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</form>
 	    </div>	
 	    </div>
 	    </div>
     </div>
     <div class = "container">
 	<div class = "panel panel-default">
-	    <h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	<div class = "panel-body">
+	<h3 class = 'text-center'>Reviews&nbsp({{$professor->comments->count()}})</h3>
 	@if ($comments->count() === 0)
 		<h4 class = "text-center">No reviews yet</h4>
 	@endif
