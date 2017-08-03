@@ -37,8 +37,10 @@
     </div>
     {{ Session::get('message') }}	
     <div class = "container">
-	<div class = "text-center">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
+	<div class = "col-md-12">
+	    <div class = "text-center">
+		    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#review">Write a review</button>
+	    </div>
 	</div>
     </div>
     <div class = "modal fade" id = "review" role="dialog">
