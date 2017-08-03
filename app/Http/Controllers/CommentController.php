@@ -14,14 +14,17 @@ use App\Http\Requests\CommentRequest;
 class CommentController extends Controller
 {
 
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}	
 	public function create(CommentRequest $request, $id)
 	{
 		$data = $request->all();
-		$user = Auth::user();
+		if (Auth::check())
+		{
+		    $user = Auth::user();
+		}
+		else
+		{
+		    $user = "Anonymous student";
+		}
 		$professor = Professor::find($id);
 
 		if($professor->comment_count() == 0)
@@ -58,6 +61,7 @@ class CommentController extends Controller
 
 	public function remove($profId, $id)
 	{
+		$this->middleware('auth');
 		Professor_Comment::find($id)->delete();
 		return Redirect::back()->with('message', "Review deleted");
 	}	
