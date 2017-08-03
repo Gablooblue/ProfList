@@ -2,6 +2,7 @@
 
 @section('content')
 <div class = "container" style="padding-top:70px;">
+    {{ Session::get('message') }}	
     <div class = "container">
 	<div class = "panel panel-default">
 		<!-- TODO
@@ -35,7 +36,6 @@
 		</div>
 	</div>
     </div>
-    {{ Session::get('message') }}	
     <div class = "container">
 	<div class = "col-md-12">
 	    <div class = "text-center">
