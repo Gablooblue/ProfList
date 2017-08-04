@@ -15,26 +15,32 @@
 <!-- Header -->
 
 <a name="about"></a>
-<div class="intro-header">
+<div class="jumbotron" id = "intro-header">
 <div class="container">
     <div class="row">
 	<div class="col-lg-12 pull-right">
 	    <div class="intro-message">
-		<h1>Sophists</h1>
-		<h3>Find and rate your professors</h3>
-		<hr class="intro-divider">
-		<ul class="list-inline intro-social-buttons">
-		    <li>
-			<a href="{{ url('/login') }}" class = "btn btn-primary">Login</a>
-		    </li>
-		    <li>
-			<a href="{{ url('/register') }}" class = "btn btn-primary">Sign Up</a>
-		    </li>
-		</ul>
+		<h3>Start looking for your professors</h3>
+		<div class = "col-md-4 col-md-offset-4">
+		    <div class = "form-group">
+			<form role="form" method="get" action="{{ url('professors') }}">
+			    <div class= "form-group has-feedback">
+				    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+				    <i class ="glyphicon glyphicon-search form-control-feedback"></i>
+			    </div>
+			    <label for ="school" class = "col-md-2 control-label">University</label>
+			    <select class="form-control" name = "school" id = "school" value = "old('school')">
+				    <option selected value=''>Any</option>
+				    @foreach ($universities as $university)
+					    <option value="{{$university->id}}">{{$university->name}}</option>
+				    @endforeach
+			    </select>
+		    </div>
+		    </form>
+		</div>
 	    </div>
 	</div>
     </div>
-
 </div>
 <!-- /.container -->
 

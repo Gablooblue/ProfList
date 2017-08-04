@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
+use App\University;
 
 class WelcomeController extends Controller
 {
@@ -19,7 +21,8 @@ class WelcomeController extends Controller
 		}	
 		else
 		{
-			return view('index');
+		    $universities = University::orderBy('name')->get();
+		    return view('index', ['universities' => $universities]);
 		}	
 	}
 }
