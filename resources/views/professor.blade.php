@@ -16,7 +16,7 @@
 		    <h2 class = "media-heading"> {{ $professor->lname }}, {{$professor->fname}} {{$professor->mname}} </h2>
 		    <div class = "pull-right">
 			@if ($professor->comments->count() === 0)
-			    <i>No reviews yet </i>
+			    <i>No reviews yet</i>
 			@else
 			    <h3 class= "media-heading">{{round($percentage,2)}}%</h3>
 			@endif
@@ -66,8 +66,7 @@
 			</div>
 			{{ csrf_field() }}
 			<div class = "form-group">
-				<div class = "col-md-8 col-md-offset-6">
-					<button class = "btn btn-default" data-dismiss="modal">Cancel</button>
+				<div class = "col-md-8 col-md-offset-7">
 					<input type = "submit" name = "submit" id = "submit" placeholder="submit" class = "btn btn-primary"/>
 				</div>
 			</div>
