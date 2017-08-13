@@ -53,8 +53,13 @@ class FilterController extends Controller
 		{
 			$filter->where('university_id', $request->school);
 		}	
+
 		if(request()->has('search'))
 		{
+			if(request()->has('school'))
+			{
+				$filter = $filter->where('university_id', $request->school);
+			}	
 			$search = $request->search;
 			$searchValues = preg_split('/\s+/', $search, -1, PREG_SPLIT_NO_EMPTY);
 			foreach($searchValues as $value)
